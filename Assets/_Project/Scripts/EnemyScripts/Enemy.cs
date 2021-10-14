@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public float stoppingDstMultiplier = 2f;
     public float initSpeed = 4f;
     public int maxHealth = 20;
-    public bool isSlow;
+    bool m_isSlow;
     float m_speed = 4f;
     int m_health;
    
@@ -112,12 +112,17 @@ public class Enemy : MonoBehaviour
 
     public void ResetSpeed()
     {
+        m_isSlow = false;
         m_speed = initSpeed;
     }
 
     public void DecreaseSpeed(int speed)
     {
+        //prevent slow speed stacking
+        if (m_isSlow) return;
+
         m_speed -= speed;
+        m_isSlow = true;
     }
 
 }

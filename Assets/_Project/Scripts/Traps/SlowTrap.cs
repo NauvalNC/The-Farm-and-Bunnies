@@ -6,20 +6,21 @@ public class SlowTrap : AOETrap
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && !isDragging)
         {
-            other.GetComponent<Enemy>().DecreaseSpeed(slow.slowSpeed);
+            Enemy enemy = other.GetComponent<Enemy>();
+            enemy.DecreaseSpeed(slow.slowSpeed);
+
+           
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && !isDragging)
         {
-            if (other.CompareTag("Enemy"))
-            {
-                other.GetComponent<Enemy>().ResetSpeed();
-            }
+            Enemy enemy = other.GetComponent<Enemy>();
+            enemy.ResetSpeed();
         }
     }
 }

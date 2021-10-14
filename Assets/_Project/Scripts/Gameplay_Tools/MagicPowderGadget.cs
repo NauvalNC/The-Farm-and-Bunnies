@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
-
 public class MagicPowderGadget : MonoBehaviour
 {
+
     [Header("General")]
     public float powderAOERadius = 5f;
     public float maxEnergy;
@@ -63,7 +62,9 @@ public class MagicPowderGadget : MonoBehaviour
                 Debug.Log("Hit count: " + m_colls.Length.ToString());
                 foreach(Collider c in m_colls)
                 {
-                    Debug.Log(c.gameObject.name);
+                    //apply damage
+                    int randDMG = Random.Range(magicDMG - 3, magicDMG + 4);
+                    c.GetComponent<Enemy>().OnDamage(randDMG);
                 }
             }
         }

@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public Transform targetDes;
     public float stoppingDstMultiplier = 2f;
     public float speed = 4f;
+    public int maxHealth = 20;
+    int m_health;
     NavMeshAgent m_agent;
     Crate m_crate;
 
@@ -22,11 +24,14 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        m_health = maxHealth;
         m_agent = GetComponent<NavMeshAgent>();
+
     }
 
     private void Update()
     {
+     
         RunAgent();
         UpdateGraphics();
     }
@@ -90,4 +95,16 @@ public class Enemy : MonoBehaviour
     {
         this.targetDes = targetDes;
     }
+
+    public void OnDamage(int damage)
+    {
+        m_health -= damage;
+        if(m_health <= 0)
+        {
+            //enemy death
+            Destroy(gameObject);
+        }
+    }
+
+
 }

@@ -417,6 +417,7 @@ MonoBehaviour:
   targetDes: {fileID: 0}
   stoppingDstMultiplier: 8
   speed: 4
+  maxHealth: 20
   portal: {fileID: 0}
   statusFlag: {fileID: 2266431801452260429}
 --- !u!1 &2266431803017970633

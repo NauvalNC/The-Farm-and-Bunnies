@@ -15,8 +15,8 @@ MonoBehaviour:
   gadgetName: 
   gadgetDescription: 
   gadgetIcon: {fileID: 21300000, guid: 0d46c76021a8d1342b32725a5d1ac58e, type: 3}
-  prefab: {fileID: 0}
-  DPCost: 0
-  CD: 0
+  prefab: {fileID: 3474380237898818993, guid: 59fc9ff7d751cf84bab6c508050beea9, type: 3}
+  DPCost: 3
+  CD: 3
   AOE: 0
-  slowSpeed: 0
+  slowSpeed: 3

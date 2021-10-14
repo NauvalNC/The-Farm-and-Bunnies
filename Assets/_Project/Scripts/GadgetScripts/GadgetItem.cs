@@ -41,7 +41,11 @@ public class GadgetItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
         GameManager.Instance.GainTopPriority(gameObject);
         m_tmpObj = GetPool();
-        if (m_tmpObj == null) m_tmpObj = Instantiate(gadget.gadget.prefab, Vector3.zero, Quaternion.identity);
+        if (m_tmpObj == null)
+        {
+            m_tmpObj = Instantiate(gadget.gadget.prefab, Vector3.zero, Quaternion.identity);
+            m_tmpObj.GetComponent<Trap>().isDragging = true;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -67,8 +71,10 @@ public class GadgetItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         if (m_tmpObj == null) return;
 
         m_tmpObj.transform.SetParent(m_pool.transform);
+        m_tmpObj.GetComponent<Trap>().isDragging = false;
         m_tmpObj = null;
-        
+
+
         m_cdTimer = gadget.gadget.CD;
         GadgetDeployer.Instance.UseDP(gadget.gadget.DPCost);
         

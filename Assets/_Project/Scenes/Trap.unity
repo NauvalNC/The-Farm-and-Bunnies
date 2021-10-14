@@ -507,7 +507,7 @@ MonoBehaviour:
   maxEnergy: 100
   magicCost: 20
   energyRecoveryPerSecond: 15
-  magicDMG: 0
+  magicDMG: 20
   powderVFX: {fileID: 150622054}
   energyBar: {fileID: 1497442608}
 --- !u!114 &292292555
@@ -529,7 +529,7 @@ MonoBehaviour:
   gadgetIconPrefab: {fileID: 5208728295127918822, guid: 5b101600a43340d4aafa79291b78733e, type: 3}
   gadgetLister: {fileID: 1889207719}
   gadgets:
-  - gadget: {fileID: 11400000, guid: a3f2b9b1a5f3993418ad283c07c82f3d, type: 2}
+  - gadget: {fileID: 11400000, guid: 7b6cfc4f70e135c4eaa911ea8e0bfc73, type: 2}
     qty: 10
 --- !u!114 &292292556
 MonoBehaviour:

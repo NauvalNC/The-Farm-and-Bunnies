@@ -2,44 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosiveTrap : MonoBehaviour
+public class ExplosiveTrap : AOETrap
 {
     public Explosive explosiveStats;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (isEnemyDetected())
+        if (isEnemyDetected(explosiveStats.AOE))
         {
             //play animation
         }
     }
-    Collider[] enemyList()
-    {
-        Collider[] enemies = Physics.OverlapSphere(transform.position, explosiveStats.AOE, 1 << 7);
-        return enemies;
-    }
-
-    bool isEnemyDetected()
-    {
-        
-        if (enemyList() != null)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    //dispatch after animation
+    
+    //dispatch when animation
     public void Explode()
     {
-        foreach(Collider enemy in enemyList())
+        foreach(Collider enemy in enemyList(explosiveStats.AOE))
         {
             enemy.GetComponent<Enemy>().OnDamage(explosiveStats.DMG);
         }
@@ -50,9 +28,6 @@ public class ExplosiveTrap : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-
-
 
     private void OnDrawGizmos()
     {

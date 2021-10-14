@@ -11,11 +11,8 @@ public class Gadget : ScriptableObject
     public Sprite gadgetIcon;
     public GameObject prefab;
 
-    [Header("Stats")]
+    [Header("Mandatory")]
     public int DPCost;
-    public int HP;
-    public int DMG;
-    public int DEF;
     public int CD;
 
     public virtual void ExecGadget()

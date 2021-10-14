@@ -9,9 +9,12 @@ public class Enemy : MonoBehaviour
     [Header("Agent Settings")]
     public Transform targetDes;
     public float stoppingDstMultiplier = 2f;
-    public float speed = 4f;
+    public float initSpeed = 4f;
     public int maxHealth = 20;
+    public bool isSlow;
+    float m_speed = 4f;
     int m_health;
+   
     NavMeshAgent m_agent;
     Crate m_crate;
 
@@ -24,6 +27,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        m_speed = initSpeed;
         m_health = maxHealth;
         m_agent = GetComponent<NavMeshAgent>();
 
@@ -43,7 +47,7 @@ public class Enemy : MonoBehaviour
 
     void RunAgent()
     {
-        m_agent.speed = speed;
+        m_agent.speed = m_speed;
 
         // Try to reach destination
         if (targetDes != null)
@@ -106,5 +110,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void ResetSpeed()
+    {
+        m_speed = initSpeed;
+    }
+
+    public void DecreaseSpeed(int speed)
+    {
+        m_speed -= speed;
+    }
 
 }

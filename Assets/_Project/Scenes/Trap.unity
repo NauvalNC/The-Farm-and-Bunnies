@@ -533,6 +533,8 @@ MonoBehaviour:
     qty: 10
   - gadget: {fileID: 11400000, guid: 9c4a7f155a627224fbfdb9d51f71fbda, type: 2}
     qty: 10
+  - gadget: {fileID: 11400000, guid: 5e8397cf6ce04f047a5e6ed1866837d3, type: 2}
+    qty: 10
 --- !u!114 &292292556
 MonoBehaviour:
   m_ObjectHideFlags: 0

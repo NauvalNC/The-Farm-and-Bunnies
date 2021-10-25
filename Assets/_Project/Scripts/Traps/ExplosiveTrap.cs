@@ -8,9 +8,10 @@ public class ExplosiveTrap : AOETrap
 
     void Update()
     {
-        if (isEnemyDetected(explosiveStats.AOE))
+        if (isEnemyDetected(explosiveStats.AOE) && !isDragging)
         {
             //play animation
+            print("PlayAnimation");
         }
     }
     

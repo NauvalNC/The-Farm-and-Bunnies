@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AOETrap : Trap
+abstract public class AOETrap : Trap
 {
     protected Collider[] enemyList(int AOE)
     {

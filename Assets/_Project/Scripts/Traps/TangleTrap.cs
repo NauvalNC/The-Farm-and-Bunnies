@@ -7,10 +7,12 @@ public class TangleTrap : SingleTargetTrap
 {
     public Tangle tangleStats;
     float m_tangleDur;
+    Animator m_animator;
 
     private void Start()
     {
         m_tangleDur = tangleStats.tangleDuration;
+        m_animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -21,9 +23,10 @@ public class TangleTrap : SingleTargetTrap
         {
             if (m_tangleDur > 0)
             {
-  
+                
                 target.GetComponent<Enemy>().Tangle();
                 m_tangleDur -= Time.deltaTime;
+                m_animator.SetTrigger("Catch");
 
             }
             else

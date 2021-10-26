@@ -7,25 +7,18 @@ public class start : MonoBehaviour
 {
     public Animator transition;
 
-/*    void Update()
+
+    public void LoadNextLevel(string sceneName)
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            LoadNextLevel();
-        }
-    }
-*/
-    public void LoadNextLevel()
-    {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadLevel(sceneName));
     }
 
-    IEnumerator LoadLevel(int levelIndex)
+    IEnumerator LoadLevel(string sceneName)
     {
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(1);
 
-        SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene(sceneName);
     }
 }

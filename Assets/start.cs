@@ -5,8 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class start : MonoBehaviour
 {
-    public void OnPressStartButton()
+    public Animator transition;
+
+/*    void Update()
     {
-        SceneManager.LoadScene("level_select");
+        if (Input.GetMouseButtonDown(0))
+        {
+            LoadNextLevel();
+        }
+    }
+*/
+    public void LoadNextLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(levelIndex);
     }
 }

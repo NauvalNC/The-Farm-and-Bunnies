@@ -6,23 +6,11 @@ abstract public class SingleTargetTrap : Trap
 {
     public GameObject target;
 
-    protected bool isEnemyDetected()
+    private void OnTriggerStay(Collider other)
     {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position,transform.up,out hit, 1 << 7 ) && target == null){
-            print(hit.transform.name);
-            target = hit.transform.gameObject;
-            
-        }
-
-        if (target == null)
+        if(other.CompareTag("Enemy") && target == null)
         {
-            return false;
+            target = other.gameObject;
         }
-            
-        else 
-        {
-            return true;
-        }
-    } 
+    }
 }

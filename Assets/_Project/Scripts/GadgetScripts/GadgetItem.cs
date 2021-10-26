@@ -59,7 +59,7 @@ public class GadgetItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
         if (Physics.Raycast(m_ray, out m_hit, Mathf.Infinity, 1 << 6))
         {
-            m_tmpObj.transform.position = m_hit.point;
+            m_tmpObj.transform.position = new Vector3(m_hit.point.x, m_hit.point.y + 0.1f, m_hit.point.z);
         }
     }
 

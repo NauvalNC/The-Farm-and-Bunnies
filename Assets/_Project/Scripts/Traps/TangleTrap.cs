@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TangleTrap : SingleTargetTrap
 {
     public Tangle tangleStats;
     float m_tangleDur;
+
     private void Start()
     {
         m_tangleDur = tangleStats.tangleDuration;
@@ -13,19 +15,22 @@ public class TangleTrap : SingleTargetTrap
     // Update is called once per frame
     void Update()
     {
-        if(isEnemyDetected() && !isDragging)
+
+
+        if(target != null && !isDragging)
         {
-            if(m_tangleDur > 0)
+            if (m_tangleDur > 0)
             {
-                m_tangleDur -= Time.deltaTime;
+  
                 target.GetComponent<Enemy>().Tangle();
+                m_tangleDur -= Time.deltaTime;
 
             }
-            else 
+            else
             {
                 target.GetComponent<Enemy>().ResetSpeed();
                 Destroy(gameObject);
-            
+
             }
         }
 

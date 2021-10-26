@@ -15,7 +15,7 @@ MonoBehaviour:
   gadgetName: 
   gadgetDescription: 
   gadgetIcon: {fileID: 21300000, guid: 56f1a183ad324a94aac724be5967cbfe, type: 3}
-  prefab: {fileID: 5979769324279471343, guid: a09e8612eb1df8d4abebc1e801a7e941, type: 3}
+  prefab: {fileID: 3016719693027299160, guid: d03859f03983c844e875e6887da6f436, type: 3}
   DPCost: 4
   CD: 2
   DMG: 20

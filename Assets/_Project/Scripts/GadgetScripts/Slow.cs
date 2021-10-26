@@ -5,4 +5,5 @@ public class Slow : Gadget
     [Header("Stats")]
     public int AOE;
     public int slowSpeed;
+    public float slowDuration;
 }

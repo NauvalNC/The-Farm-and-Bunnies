@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     int m_wave;
     int m_currWaveOutOfDuties, m_currWaveTotalEnemies;
 
+
     GameObject m_systemTopPriority;
     bool m_isPointerOverUI;
 

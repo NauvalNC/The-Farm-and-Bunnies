@@ -10,6 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c79145a96f87c2d48b4e53b7db2d8e53, type: 3}
-  m_Name: P1_W1
+  m_Name: W1_P1
   m_EditorClassIdentifier: 
-  enemiesToSpawn: []
+  enemiesToSpawn:
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
+    timeToSpawn: 0
+    timeforNextSpawn: 0
+    crateTargetIndex: 1
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
+    timeToSpawn: 0
+    timeforNextSpawn: 10
+    crateTargetIndex: 1
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
+    timeToSpawn: 0
+    timeforNextSpawn: 2
+    crateTargetIndex: 1
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
+    timeToSpawn: 0
+    timeforNextSpawn: 1
+    crateTargetIndex: 0
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
+    timeToSpawn: 0
+    timeforNextSpawn: 2.4
+    crateTargetIndex: 1

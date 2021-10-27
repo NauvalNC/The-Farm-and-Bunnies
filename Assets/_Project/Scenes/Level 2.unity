@@ -6438,7 +6438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCooldown: 1
   enemyWaves:
-  - {fileID: 11400000, guid: 57fa4b08b8fe2924eab3e33429baf1fc, type: 2}
+  - {fileID: 11400000, guid: 3e7326b87da2cfb4aac9888b5f4bf145, type: 2}
   - {fileID: 11400000, guid: 5665bd937bc8e0c43bff1eb722ab53cc, type: 2}
   enemyCounterTxt: {fileID: 977097841}
   m_waveEnded: 1

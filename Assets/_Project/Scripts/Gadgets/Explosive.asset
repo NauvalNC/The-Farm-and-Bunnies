@@ -15,8 +15,9 @@ MonoBehaviour:
   gadgetName: 
   gadgetDescription: 
   gadgetIcon: {fileID: 21300000, guid: 56f1a183ad324a94aac724be5967cbfe, type: 3}
-  prefab: {fileID: 5979769324279471343, guid: a09e8612eb1df8d4abebc1e801a7e941, type: 3}
+  prefab: {fileID: 270058560718291005, guid: 6a901dd5b7cb5154a9f7e4d8fc2b5767, type: 3}
   DPCost: 4
   CD: 2
   DMG: 20
   AOE: 3
+  explodeDur: 2

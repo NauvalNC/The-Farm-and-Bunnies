@@ -13,5 +13,6 @@ public class EnemySpawnData
 {
     public GameObject prefabToSpawn;
     public float timeToSpawn;
+    public float timeforNextSpawn;
     public int crateTargetIndex;
 }

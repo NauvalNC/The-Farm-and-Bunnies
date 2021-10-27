@@ -3,7 +3,7 @@ using UnityEngine;
 public class Slow : Gadget
 {
     [Header("Stats")]
-    public int AOE;
+    public float AOE;
     public int slowSpeed;
     public float slowDuration;
 }

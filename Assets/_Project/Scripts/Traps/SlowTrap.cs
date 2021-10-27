@@ -10,6 +10,7 @@ public class SlowTrap : AOETrap
         m_dur = slow.slowDuration;
         m_director = GetComponent<PlayableDirector>();
         
+        
     }
     private void Update()
     {
@@ -17,6 +18,10 @@ public class SlowTrap : AOETrap
         { 
             m_director.Play();
             m_dur -= Time.deltaTime;
+        }
+        if(m_dur <= 0)
+        {
+            Destroy(gameObject);
         }
     }
     private void OnTriggerStay(Collider other)

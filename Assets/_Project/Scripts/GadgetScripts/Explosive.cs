@@ -7,6 +7,7 @@ public class Explosive : Gadget
 {
     [Header("Stats")]
     public int DMG;
-    public int AOE;
+    public float AOE;
+    public float explodeDur;
 
 }

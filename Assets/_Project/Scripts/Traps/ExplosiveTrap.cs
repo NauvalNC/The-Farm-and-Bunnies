@@ -5,28 +5,55 @@ using UnityEngine;
 public class ExplosiveTrap : AOETrap
 {
     public Explosive explosiveStats;
-
+    private float m_explodeDur;
+    bool m_trigger, m_hasDestroy;
+    private void Start()
+    {
+        m_explodeDur = explosiveStats.explodeDur; 
+    }
     void Update()
     {
-        if (isEnemyDetected(explosiveStats.AOE))
-        {
-            //play animation
+        if (m_trigger) 
+        { 
+            m_explodeDur -= Time.deltaTime; 
+            transform.GetChild(0).gameObject.SetActive(true); 
         }
+
+        if(m_explodeDur <= -.1f)
+        {
+            Explode();
+            Destroy(gameObject);
+
+        }
+        
     }
     
-    //dispatch when animation
     public void Explode()
     {
-        foreach(Collider enemy in enemyList(explosiveStats.AOE))
+        transform.GetChild(0).gameObject.SetActive(false);
+        GameObject FX = Instantiate(transform.GetChild(1).gameObject, transform.position, Quaternion.identity);
+        FX.SetActive(true);
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy") && !isDragging)
         {
-            enemy.GetComponent<Enemy>().OnDamage(explosiveStats.DMG);
+            m_trigger = true;
         }
     }
 
-    //dispatch after animation finished
-    public void destroyObject()
+    private void OnTriggerStay(Collider other)
     {
-        Destroy(gameObject);
+        if (other.CompareTag("Enemy") && m_explodeDur <= 0)
+        {
+            other.GetComponent<Enemy>().OnDamage(explosiveStats.DMG);
+            
+
+           
+        }
+
     }
 
     private void OnDrawGizmos()

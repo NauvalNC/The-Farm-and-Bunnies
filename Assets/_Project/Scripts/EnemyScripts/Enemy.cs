@@ -125,4 +125,8 @@ public class Enemy : MonoBehaviour
         m_isSlow = true;
     }
 
+    public void Tangle()
+    {
+        m_speed = 0;
+    }
 }

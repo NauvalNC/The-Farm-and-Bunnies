@@ -49,9 +49,7 @@ public class ExplosiveTrap : AOETrap
         if (other.CompareTag("Enemy") && m_explodeDur <= 0)
         {
             other.GetComponent<Enemy>().OnDamage(explosiveStats.DMG);
-            
-
-           
+                       
         }
 
     }

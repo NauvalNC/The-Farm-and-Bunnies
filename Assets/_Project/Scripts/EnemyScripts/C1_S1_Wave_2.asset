@@ -13,24 +13,24 @@ MonoBehaviour:
   m_Name: C1_S1_Wave_2
   m_EditorClassIdentifier: 
   enemiesToSpawn:
-  - prefabToSpawn: {fileID: 2266431802578204668, guid: fe706c00ea2869441b7f0ad689bf8bbc, type: 3}
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
     timeToSpawn: 0
     crateTargetIndex: 0
-  - prefabToSpawn: {fileID: 2266431802578204668, guid: fe706c00ea2869441b7f0ad689bf8bbc, type: 3}
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
     timeToSpawn: 0
     crateTargetIndex: 0
-  - prefabToSpawn: {fileID: 2266431802578204668, guid: fe706c00ea2869441b7f0ad689bf8bbc, type: 3}
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
     timeToSpawn: 0
     crateTargetIndex: 0
-  - prefabToSpawn: {fileID: 2266431802578204668, guid: fe706c00ea2869441b7f0ad689bf8bbc, type: 3}
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
     timeToSpawn: 0
     crateTargetIndex: 0
-  - prefabToSpawn: {fileID: 2266431802578204668, guid: fe706c00ea2869441b7f0ad689bf8bbc, type: 3}
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
     timeToSpawn: 5
     crateTargetIndex: 0
-  - prefabToSpawn: {fileID: 2266431802578204668, guid: fe706c00ea2869441b7f0ad689bf8bbc, type: 3}
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
     timeToSpawn: 5
     crateTargetIndex: 0
-  - prefabToSpawn: {fileID: 2266431802578204668, guid: fe706c00ea2869441b7f0ad689bf8bbc, type: 3}
+  - prefabToSpawn: {fileID: 3294328765730279799, guid: 1a8ae8ac189e09244a2295d47c577f7f, type: 3}
     timeToSpawn: 5
     crateTargetIndex: 0

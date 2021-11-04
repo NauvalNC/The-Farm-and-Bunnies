@@ -7,6 +7,6 @@ public class Lvl1Scriptbutton : MonoBehaviour
 {
     public void OnPressStartButton()
     {
-        SceneManager.LoadScene("Trap");
+        SceneManager.LoadScene("Level 1");
     }
 }

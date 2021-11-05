@@ -811,6 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b319d572ba668c44bf476bcbf7f5f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Result_Screen: {fileID: 292292557}
   crateLister: {fileID: 1840983726}
   crates: []
   numOfItemTxt: {fileID: 1348853107}
@@ -1830,7 +1831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d49a99ffae569f4daf7a980b933e331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlay: {fileID: 635533075}
+  ResultScreen: {fileID: 0}
+  HUD: {fileID: 635533075}
   highlightTitle: {fileID: 1759655284}
   highlightSubTitle: {fileID: 772246008}
 --- !u!4 &653391525 stripped
@@ -4340,7 +4342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1481024236
 Animator:
   serializedVersion: 3

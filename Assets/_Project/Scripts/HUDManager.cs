@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class HUDManager : MonoBehaviour
 {
     static HUDManager instance;
+    public GameObject ResultScreen;
+    public GameObject HUD;
     public static HUDManager Instance
     {
         get
@@ -37,4 +39,16 @@ public class HUDManager : MonoBehaviour
     {
         GameManager.Instance.StartNextWave();
     }
+
+    public void hideHUD()
+    {
+        StartCoroutine(hide(2));
+    }
+
+    IEnumerator hide(float time)
+    {
+        yield return new WaitForSeconds(2);
+        HUD.SetActive(false);
+    }
+ 
 }

@@ -20,4 +20,4 @@ MonoBehaviour:
   CD: 2
   DMG: 20
   AOE: 3
-  explodeDur: 2
+  explodeDur: 1.5

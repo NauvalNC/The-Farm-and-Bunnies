@@ -18,4 +18,4 @@ MonoBehaviour:
   prefab: {fileID: 3825169100041004338, guid: 8579c7ec4f8b4ee4a8f0cdf044753a41, type: 3}
   DPCost: 4
   CD: 4
-  tangleDuration: 1.2
+  tangleDuration: 3

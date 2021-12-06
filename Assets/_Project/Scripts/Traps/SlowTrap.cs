@@ -50,12 +50,16 @@ public class SlowTrap : AOETrap
 
     private void OnDestroy()
     {
-        if(enemies.Count > 0)
+        if(enemies != null)
         {
-            foreach(Enemy enemy in enemies)
+            if (enemies.Count > 0)
             {
-                enemy.GetComponent<Enemy>().ResetSpeed();
+                foreach (Enemy enemy in enemies)
+                {
+                    enemy.GetComponent<Enemy>().ResetSpeed();
+                }
             }
         }
+
     }
 }

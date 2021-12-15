@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 public class SlowTrap : AOETrap
@@ -5,6 +7,7 @@ public class SlowTrap : AOETrap
     public Slow slow;
     private float m_dur;
     PlayableDirector m_director;
+    List<Enemy> enemies = new List<Enemy>();
     private void Start()
     {
         m_dur = slow.slowDuration;
@@ -29,20 +32,9 @@ public class SlowTrap : AOETrap
         
         if (other.CompareTag("Enemy") && !isDragging)
         {
-            if(m_dur > 0)
-            {
-                
-                Enemy enemy = other.GetComponent<Enemy>();
-                enemy.DecreaseSpeed(slow.slowSpeed);
-            }
-            else
-            {
-                Enemy enemy = other.GetComponent<Enemy>();
-                enemy.ResetSpeed();
-                Destroy(gameObject);
-            }
-
-
+            Enemy enemy = other.GetComponent<Enemy>();
+            enemy.DecreaseSpeed(slow.slowSpeed);
+            enemies.Add(enemy);
            
         }
     }
@@ -54,5 +46,20 @@ public class SlowTrap : AOETrap
             Enemy enemy = other.GetComponent<Enemy>();
             enemy.ResetSpeed();
         }
+    }
+
+    private void OnDestroy()
+    {
+        if(enemies != null)
+        {
+            if (enemies.Count > 0)
+            {
+                foreach (Enemy enemy in enemies)
+                {
+                    enemy.GetComponent<Enemy>().ResetSpeed();
+                }
+            }
+        }
+
     }
 }

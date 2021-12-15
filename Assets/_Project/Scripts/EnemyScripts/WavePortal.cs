@@ -15,7 +15,8 @@ public class WavePortal : MonoBehaviour
     Transform m_spawnerPos;
     
     float m_timer, m_spawnCD;
-    
+
+
     int m_spawnIndex = 0;
     bool m_waveStarted = false;
     [SerializeField] bool m_waveEnded = true;
@@ -95,7 +96,7 @@ public class WavePortal : MonoBehaviour
             m_obj.portal = m_spawnerPos;
 
             m_spawnedEnemies.Add(m_obj);
-            m_spawnCD = spawnCooldown;
+            m_spawnCD = spawnCooldown + m_temp.timeforNextSpawn;
             m_spawnIndex++;
         }
     }

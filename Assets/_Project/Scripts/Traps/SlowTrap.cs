@@ -50,6 +50,7 @@ public class SlowTrap : AOETrap
 
     private void OnDestroy()
     {
+        if (enemies.Count == 0 || enemies == null) return;
         if(enemies != null)
         {
             if (enemies.Count > 0)

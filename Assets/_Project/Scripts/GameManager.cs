@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     static GameManager instance;
+    
     public static GameManager Instance
     {
         get
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
             return instance;
         }
     }
+
+    [SerializeField]
+    public ResultScreenManager Result_Screen;
 
     [Header("Crates Manager")]
     [SerializeField]
@@ -184,7 +188,7 @@ public class GameManager : MonoBehaviour
 
     #region Game Over Manager
     
-    void OnGameOver()
+    public void OnGameOver()
     {
         if (m_isGameOverInvoked) return;
         m_isGameOverInvoked = true;
@@ -192,6 +196,10 @@ public class GameManager : MonoBehaviour
         HUDManager.Instance.highlightTitle.text = "Game Over!";
         HUDManager.Instance.highlightSubTitle.text = "The game is over!";
         HUDManager.Instance.GetHUDAC().Play("wave_in");
+
+        HUDManager.Instance.hideHUD();
+
+        Result_Screen.ShowResultScreen();
     }
 
     #endregion

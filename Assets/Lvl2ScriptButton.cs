@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Lvl1Scriptbutton : MonoBehaviour
+public class Lvl2ScriptButton : MonoBehaviour
 {
     public void OnPressStartButton()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level 2");
     }
 }

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Lvl1Scriptbutton : MonoBehaviour
+public class Lvl3ScriptButton : MonoBehaviour
 {
+    // Start is called before the first frame update
     public void OnPressStartButton()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level 2");
     }
 }

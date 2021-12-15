@@ -920,6 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b319d572ba668c44bf476bcbf7f5f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Result_Screen: {fileID: 0}
   crateLister: {fileID: 1840983726}
   crates: []
   numOfItemTxt: {fileID: 1348853107}
@@ -1967,8 +1968,8 @@ RectTransform:
   - {fileID: 1484682027}
   - {fileID: 299087940}
   - {fileID: 1733457184}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1916877880}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2006,6 +2007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d49a99ffae569f4daf7a980b933e331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResultScreen: {fileID: 0}
+  HUD: {fileID: 635533075}
   highlightTitle: {fileID: 1759655284}
   highlightSubTitle: {fileID: 772246008}
 --- !u!4 &653391525 stripped
@@ -2246,7 +2249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &695059133
 GameObject:
@@ -7305,8 +7308,9 @@ Transform:
   - {fileID: 1906366220}
   - {fileID: 1858354470}
   - {fileID: 946237550}
+  - {fileID: 635533079}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1917504236
 GameObject:

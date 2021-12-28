@@ -57,6 +57,7 @@ public class SlowTrap : AOETrap
             {
                 foreach (Enemy enemy in enemies)
                 {
+                    if(enemy != null)
                     enemy.GetComponent<Enemy>().ResetSpeed();
                 }
             }

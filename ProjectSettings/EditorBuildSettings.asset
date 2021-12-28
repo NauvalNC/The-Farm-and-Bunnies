@@ -15,9 +15,12 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Chapter Select.unity
     guid: 5c4ae1838d7e4c84eb62e29d05a12567
   - enabled: 1
-    path: Assets/_Project/Scenes/Chapter 1/Level 1.unity
+    path: Assets/_Project/Scenes/Chapter 1/C1_LS.unity
+    guid: 8cc1b7826c8d52246bb3afe2d0383a84
+  - enabled: 1
+    path: Assets/_Project/Scenes/Chapter 1/C1_L1.unity
     guid: a5aee7382d05a994ca0813516df986c5
   - enabled: 1
-    path: Assets/_Project/Scenes/Chapter 1/Level 2.unity
+    path: Assets/_Project/Scenes/Chapter 1/C1_L2.unity
     guid: e88fc5a7443c58d459b2c96deb41a8a4
   m_configObjects: {}

@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public int numberOfWave = 2;
     public Transform wavePortalLister;
     public Text waveTxt, numberOfEnemyTxt;
+
     protected List<WavePortal> m_wavePortal = new List<WavePortal>();
     int m_wave;
     int m_currWaveOutOfDuties, m_currWaveTotalEnemies;
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
     bool m_isPointerOverUI;
 
     bool m_isGameOver = false, m_isGameOverInvoked = false;
-
+    bool succeedLevel = false;
     private void Awake()
     {
         SetupAttributes();
@@ -58,7 +59,10 @@ public class GameManager : MonoBehaviour
         CheckPointerOverUI();
         UpdateGraphics();
 
+        if (Crate.totalCurrItems <= 0) m_isGameOver = true;
+
         if (m_isGameOver) OnGameOver();
+        
     }
 
     void SetupAttributes()
@@ -82,7 +86,7 @@ public class GameManager : MonoBehaviour
     {
         waveTxt.text = "Wave " + m_wave;
         numberOfEnemyTxt.text = m_currWaveOutOfDuties + "/" + m_currWaveTotalEnemies;
-        numOfItemTxt.text = m_currentTotalNumberOfItem + "/" + m_totalNumberOfItem;
+        numOfItemTxt.text = Crate.totalCurrItems + "/" + m_totalNumberOfItem;
     }
 
     #region Request System Priority
@@ -136,7 +140,12 @@ public class GameManager : MonoBehaviour
 
     public void StartNextWave()
     {
-        if (m_wave + 1 > numberOfWave) return;
+        if (m_wave + 1 > numberOfWave) 
+        {
+            m_isGameOver = true;
+            return; 
+        }
+
         m_wave++;
 
         m_currWaveOutOfDuties = m_currWaveTotalEnemies = 0;
@@ -200,6 +209,18 @@ public class GameManager : MonoBehaviour
         HUDManager.Instance.hideHUD();
 
         Result_Screen.ShowResultScreen();
+        
+        foreach (WavePortal portal in m_wavePortal)
+        {
+            portal.enabled = false;
+        }
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject enemy in enemies)
+        {
+            Destroy(enemy);
+        }
+        
     }
 
     #endregion

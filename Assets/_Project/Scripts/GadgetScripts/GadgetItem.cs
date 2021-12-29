@@ -35,8 +35,6 @@ public class GadgetItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("On Begin Drag!");
-
         if (!IsLegalToSpawn()) return;
 
         GameManager.Instance.GainTopPriority(gameObject);
@@ -50,8 +48,6 @@ public class GadgetItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("On Drag!");
-
         if (m_tmpObj == null) return;
 
         RaycastHit m_hit;
@@ -65,8 +61,6 @@ public class GadgetItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("On End Drag!");
-
         GameManager.Instance.ReleaseTopPriority(gameObject);
         if (m_tmpObj == null) return;
 

@@ -59,7 +59,7 @@ public class MagicPowderGadget : MonoBehaviour
 
                 // AOE effects to enemies
                 Collider[] m_colls = Physics.OverlapSphere(m_hit.point, powderAOERadius, 1 << 7);
-                Debug.Log("Hit count: " + m_colls.Length.ToString());
+
                 foreach(Collider c in m_colls)
                 {
                     //apply damage

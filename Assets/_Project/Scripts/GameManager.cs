@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
 
     bool m_isGameOver = false, m_isGameOverInvoked = false;
     bool succeedLevel = false;
+
+
     private void Awake()
     {
         SetupAttributes();
@@ -59,7 +61,15 @@ public class GameManager : MonoBehaviour
         CheckPointerOverUI();
         UpdateGraphics();
 
-        if (Crate.totalCurrItems <= 0) m_isGameOver = true;
+        //all carrots stolen -> lose condition
+        if (Crate.totalCurrItems <= 0)
+        {
+            succeedLevel = false;
+            m_isGameOver = true;
+        }
+
+        //defeat all wave and some carrots left -> win condition (line 153)
+        
 
         if (m_isGameOver) OnGameOver();
         
@@ -143,6 +153,8 @@ public class GameManager : MonoBehaviour
         if (m_wave + 1 > numberOfWave) 
         {
             m_isGameOver = true;
+            succeedLevel = true;
+            
             return; 
         }
 
@@ -208,7 +220,6 @@ public class GameManager : MonoBehaviour
 
         HUDManager.Instance.hideHUD();
 
-        Result_Screen.ShowResultScreen();
         
         foreach (WavePortal portal in m_wavePortal)
         {
@@ -219,6 +230,15 @@ public class GameManager : MonoBehaviour
         foreach(GameObject enemy in enemies)
         {
             Destroy(enemy);
+        }
+
+        if (!succeedLevel) 
+        {
+            UIGameManager.instance.ShowLosePanel();
+        }
+        else
+        {
+            UIGameManager.instance.ShowWinPanel();
         }
         
     }

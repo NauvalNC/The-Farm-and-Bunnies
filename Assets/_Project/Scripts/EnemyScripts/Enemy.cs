@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
      
         RunAgent();
         UpdateGraphics();
+ 
     }
 
     void UpdateGraphics()

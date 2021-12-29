@@ -39,18 +39,16 @@ public class GameManager : MonoBehaviour
     bool m_isPointerOverUI;
 
     bool m_isGameOver = false, m_isGameOverInvoked = false;
+    [SerializeField]
     bool m_succeedLevel = false;
 
 
     [Header("Score Manager")]
+    public int score;
     [SerializeField]
-    private int m_score;
+    private int m_carrot_threshold_two;
     [SerializeField]
-    private int m_carrot_left_one;
-    [SerializeField]
-    private int m_carrot_left_two;
-    [SerializeField]
-    private int m_carrot_left_three;
+    private int m_carrot_threshold_three;
 
 
 
@@ -71,15 +69,17 @@ public class GameManager : MonoBehaviour
         CheckPointerOverUI();
         UpdateGraphics();
 
+
+
+        //defeat all wave and some carrots left -> win condition (line 153)
         //all carrots stolen -> lose condition
         if (Crate.totalCurrItems <= 0)
         {
             m_succeedLevel = false;
             m_isGameOver = true;
+            print("lose");
+            return;
         }
-
-        //defeat all wave and some carrots left -> win condition (line 153)
-        
 
         if (m_isGameOver) OnGameOver();
         
@@ -160,13 +160,16 @@ public class GameManager : MonoBehaviour
 
     public void StartNextWave()
     {
-        if (m_wave + 1 > numberOfWave) 
+
+
+        if (m_wave + 1 > numberOfWave)
         {
-            m_isGameOver = true;
             m_succeedLevel = true;
-            
-            return; 
+            m_isGameOver = true;
+            print("WIn");
+            return;
         }
+
 
         m_wave++;
 
@@ -176,6 +179,9 @@ public class GameManager : MonoBehaviour
             m_currWaveTotalEnemies += portal.enemyWaves[m_wave-1].enemiesToSpawn.Count;
             portal.StartPortal(m_wave);
         }
+
+ 
+
     }
 
     void ManageWave()
@@ -197,7 +203,12 @@ public class GameManager : MonoBehaviour
         }
 
         if (m_waveEnded && m_wave < numberOfWave) StartWaveDelay();
-        else if (m_waveEnded && m_wave >= numberOfWave) m_isGameOver = true;
+        else if (m_waveEnded && m_wave >= numberOfWave) 
+        {
+          
+            m_succeedLevel = true;
+            m_isGameOver = true;
+        }
     }
 
     public int GetWave() { return m_wave; }
@@ -244,27 +255,21 @@ public class GameManager : MonoBehaviour
 
         if (!m_succeedLevel) 
         {
+            score = 0;
             UIGameManager.instance.ShowLosePanel();
         }
         else
         {
             UIGameManager.instance.ShowWinPanel();
-            if(Crate.totalCurrItems <= m_carrot_left_one)
+            if(Crate.totalCurrItems < m_carrot_threshold_three)
             {
-                m_score = 1;
-                return;
+                score = 2;
             }
-            else if(Crate.totalCurrItems <= m_carrot_left_two)
+            else if(Crate.totalCurrItems < m_carrot_threshold_two)
             {
-                m_score = 2;
-                return;
+                score = 1;
             }
-            else
-            {
-                m_score = 3;
-                return;
-            }
-            
+
         }
         
     }

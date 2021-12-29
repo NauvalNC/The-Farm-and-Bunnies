@@ -1470,10 +1470,10 @@ GameObject:
   m_Component:
   - component: {fileID: 292292552}
   - component: {fileID: 292292553}
+  - component: {fileID: 292292557}
   - component: {fileID: 292292556}
   - component: {fileID: 292292554}
   - component: {fileID: 292292555}
-  - component: {fileID: 292292557}
   m_Layer: 0
   m_Name: game_manager
   m_TagString: Untagged
@@ -1508,7 +1508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b319d572ba668c44bf476bcbf7f5f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Result_Screen: {fileID: 0}
   crateLister: {fileID: 1840983726}
   crates: []
   numOfItemTxt: {fileID: 1348853107}
@@ -1516,6 +1515,10 @@ MonoBehaviour:
   wavePortalLister: {fileID: 1957162042}
   waveTxt: {fileID: 1648750364}
   numberOfEnemyTxt: {fileID: 688187708}
+  m_score: 0
+  m_carrot_left_one: 3
+  m_carrot_left_two: 5
+  m_carrot_left_three: 0
 --- !u!114 &292292554
 MonoBehaviour:
   m_ObjectHideFlags: 0

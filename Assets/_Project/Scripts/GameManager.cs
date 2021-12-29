@@ -17,8 +17,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    public ResultScreenManager Result_Screen;
 
     [Header("Crates Manager")]
     [SerializeField]
@@ -41,7 +39,19 @@ public class GameManager : MonoBehaviour
     bool m_isPointerOverUI;
 
     bool m_isGameOver = false, m_isGameOverInvoked = false;
-    bool succeedLevel = false;
+    bool m_succeedLevel = false;
+
+
+    [Header("Score Manager")]
+    [SerializeField]
+    private int m_score;
+    [SerializeField]
+    private int m_carrot_left_one;
+    [SerializeField]
+    private int m_carrot_left_two;
+    [SerializeField]
+    private int m_carrot_left_three;
+
 
 
     private void Awake()
@@ -64,7 +74,7 @@ public class GameManager : MonoBehaviour
         //all carrots stolen -> lose condition
         if (Crate.totalCurrItems <= 0)
         {
-            succeedLevel = false;
+            m_succeedLevel = false;
             m_isGameOver = true;
         }
 
@@ -153,7 +163,7 @@ public class GameManager : MonoBehaviour
         if (m_wave + 1 > numberOfWave) 
         {
             m_isGameOver = true;
-            succeedLevel = true;
+            m_succeedLevel = true;
             
             return; 
         }
@@ -232,13 +242,29 @@ public class GameManager : MonoBehaviour
             Destroy(enemy);
         }
 
-        if (!succeedLevel) 
+        if (!m_succeedLevel) 
         {
             UIGameManager.instance.ShowLosePanel();
         }
         else
         {
             UIGameManager.instance.ShowWinPanel();
+            if(Crate.totalCurrItems <= m_carrot_left_one)
+            {
+                m_score = 1;
+                return;
+            }
+            else if(Crate.totalCurrItems <= m_carrot_left_two)
+            {
+                m_score = 2;
+                return;
+            }
+            else
+            {
+                m_score = 3;
+                return;
+            }
+            
         }
         
     }

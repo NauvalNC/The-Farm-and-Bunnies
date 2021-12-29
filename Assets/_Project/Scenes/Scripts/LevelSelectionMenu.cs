@@ -28,7 +28,7 @@ public class LevelSelectionMenu : MonoBehaviour
         GameObject m_temp;
         Transform m_starCont;
         Text m_lvNumber;
-
+        int chapter = PlayerPrefs.GetInt("Chapter");
         for (int i = 0; i < numOfDemoLevels; i++)
         {
             m_temp = Instantiate(levelPanelPrefab, levelPanelCont);
@@ -39,11 +39,18 @@ public class LevelSelectionMenu : MonoBehaviour
 
             // Color the stars based on level completion
             m_starCont = m_temp.transform.Find("star_cont");
-            
-          
+            int levelScore = PlayerPrefs.GetInt("C" + PlayerPrefs.GetInt("Chapter") + "_L"+ (i+1));
             foreach (Transform m_star in m_starCont)
             {
-                m_star.GetComponent<Image>().color = incompletedStarColor;
+                if (levelScore >= 1)
+                {
+                    m_star.GetComponent<Image>().color = completedStarColor;
+                    levelScore--;
+                }
+                else
+                {
+                    m_star.GetComponent<Image>().color = incompletedStarColor;
+                }
             }
 
 

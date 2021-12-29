@@ -260,23 +260,17 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (Crate.totalCurrItems < m_carrot_threshold_two)
+            if(Crate.totalCurrItems < m_carrot_threshold_two)
             {
                 score = 1;
             }
-
-            else if (Crate.totalCurrItems < m_carrot_threshold_three)
+            else if(Crate.totalCurrItems < m_carrot_threshold_three)
             {
                 score = 2;
             }
-
-            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, score);
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name,score);
             UIGameManager.instance.ShowWinPanel();
-
-           
-
         }
-        
     }
 
     #endregion

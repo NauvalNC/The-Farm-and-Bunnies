@@ -37,19 +37,13 @@ public class WavePortal : MonoBehaviour
             Spawn();
             TrackSpawnedEnemies();
         }
-
+        if(m_waveToSpawn != null)
         UpdateGraphics();
     }
 
     void UpdateGraphics()
     {
-        if (m_waveEnded)
-        {
-            enemyCounterTxt.text = "N/A";
-        } else
-        {
-            enemyCounterTxt.text = m_numberOfOutDuties + "/" + m_waveToSpawn.enemiesToSpawn.Count;
-        }
+        enemyCounterTxt.text = m_numberOfOutDuties + "/" + m_waveToSpawn.enemiesToSpawn.Count;
     }
 
     public void StartPortal(int waveIndex)

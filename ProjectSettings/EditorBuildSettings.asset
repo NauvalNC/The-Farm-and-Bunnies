@@ -11,22 +11,25 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Project/Scenes/Main Menu.unity
     guid: 53f5c4a2d8314184fada1f2dfff3c451
-  - enabled: 0
-    path: Assets/_Project/Scenes/level_select.unity
+  - enabled: 1
+    path: Assets/_Project/Scenes/Chapter Select.unity
     guid: 5c4ae1838d7e4c84eb62e29d05a12567
   - enabled: 1
-    path: Assets/_Project/Scenes/Chapter 1/Level 1.unity
+    path: Assets/_Project/Scenes/Chapter 1/C1_LS.unity
+    guid: 8cc1b7826c8d52246bb3afe2d0383a84
+  - enabled: 1
+    path: Assets/_Project/Scenes/Chapter 1/C1_L1.unity
     guid: a5aee7382d05a994ca0813516df986c5
   - enabled: 1
-    path: Assets/_Project/Scenes/Chapter 1/Level 2.unity
+    path: Assets/_Project/Scenes/Chapter 1/C1_L2.unity
     guid: e88fc5a7443c58d459b2c96deb41a8a4
   - enabled: 1
-    path: Assets/_Project/Scenes/Menus_by_Nauval/MainMenu.unity
+    path: Assets/_Project/Scenes/MainMenu.unity
     guid: c14a9f241e500e04abec443d4dd253d3
   - enabled: 1
-    path: Assets/_Project/Scenes/Menus_by_Nauval/ChapterSelection.unity
+    path: Assets/_Project/Scenes/ChapterSelection.unity
     guid: fbc0d6ef92b6a844f8493283c87a3b7f
   - enabled: 1
-    path: Assets/_Project/Scenes/Menus_by_Nauval/LevelSelection.unity
+    path: Assets/_Project/Scenes/LevelSelection.unity
     guid: 0ef707c57affb1148b93bfb229103bd4
   m_configObjects: {}

@@ -10,6 +10,7 @@ public class ChapterSelectionMenu : MonoBehaviour
     public void LoadChapter(int index)
     {
         // TODO: Change this if there is multiple chapters. But in the demo, we will only have one chapter.
+        PlayerPrefs.SetInt("Chapter", index);
         StartCoroutine(LoadSceneAfterExit("LevelSelection"));
         //StartCoroutine(LoadSceneAfterExit("Chapter " + index));
     }

@@ -58,7 +58,8 @@ public class LevelSelectionMenu : MonoBehaviour
 
     public void LoadLevel(int index)
     {
-        StartCoroutine(LoadSceneAfterExit("Level " + index));
+        PlayerPrefs.SetInt("Level", index);
+        StartCoroutine(LoadSceneAfterExit("C" + PlayerPrefs.GetInt("Chapter") + "_L"+ index));
     }
 
     public void ReturnToMainMenu()

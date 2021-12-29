@@ -17,8 +17,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    public ResultScreenManager Result_Screen;
 
     [Header("Crates Manager")]
     [SerializeField]
@@ -31,6 +29,7 @@ public class GameManager : MonoBehaviour
     public int numberOfWave = 2;
     public Transform wavePortalLister;
     public Text waveTxt, numberOfEnemyTxt;
+
     protected List<WavePortal> m_wavePortal = new List<WavePortal>();
     int m_wave;
     int m_currWaveOutOfDuties, m_currWaveTotalEnemies;
@@ -40,6 +39,20 @@ public class GameManager : MonoBehaviour
     bool m_isPointerOverUI;
 
     bool m_isGameOver = false, m_isGameOverInvoked = false;
+    bool m_succeedLevel = false;
+
+
+    [Header("Score Manager")]
+    [SerializeField]
+    private int m_score;
+    [SerializeField]
+    private int m_carrot_left_one;
+    [SerializeField]
+    private int m_carrot_left_two;
+    [SerializeField]
+    private int m_carrot_left_three;
+
+
 
     private void Awake()
     {
@@ -58,7 +71,18 @@ public class GameManager : MonoBehaviour
         CheckPointerOverUI();
         UpdateGraphics();
 
+        //all carrots stolen -> lose condition
+        if (Crate.totalCurrItems <= 0)
+        {
+            m_succeedLevel = false;
+            m_isGameOver = true;
+        }
+
+        //defeat all wave and some carrots left -> win condition (line 153)
+        
+
         if (m_isGameOver) OnGameOver();
+        
     }
 
     void SetupAttributes()
@@ -82,7 +106,7 @@ public class GameManager : MonoBehaviour
     {
         waveTxt.text = "Wave " + m_wave;
         numberOfEnemyTxt.text = m_currWaveOutOfDuties + "/" + m_currWaveTotalEnemies;
-        numOfItemTxt.text = m_currentTotalNumberOfItem + "/" + m_totalNumberOfItem;
+        numOfItemTxt.text = Crate.totalCurrItems + "/" + m_totalNumberOfItem;
     }
 
     #region Request System Priority
@@ -136,7 +160,14 @@ public class GameManager : MonoBehaviour
 
     public void StartNextWave()
     {
-        if (m_wave + 1 > numberOfWave) return;
+        if (m_wave + 1 > numberOfWave) 
+        {
+            m_isGameOver = true;
+            m_succeedLevel = true;
+            
+            return; 
+        }
+
         m_wave++;
 
         m_currWaveOutOfDuties = m_currWaveTotalEnemies = 0;
@@ -199,7 +230,43 @@ public class GameManager : MonoBehaviour
 
         HUDManager.Instance.hideHUD();
 
-        Result_Screen.ShowResultScreen();
+        
+        foreach (WavePortal portal in m_wavePortal)
+        {
+            portal.enabled = false;
+        }
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject enemy in enemies)
+        {
+            Destroy(enemy);
+        }
+
+        if (!m_succeedLevel) 
+        {
+            UIGameManager.instance.ShowLosePanel();
+        }
+        else
+        {
+            UIGameManager.instance.ShowWinPanel();
+            if(Crate.totalCurrItems <= m_carrot_left_one)
+            {
+                m_score = 1;
+                return;
+            }
+            else if(Crate.totalCurrItems <= m_carrot_left_two)
+            {
+                m_score = 2;
+                return;
+            }
+            else
+            {
+                m_score = 3;
+                return;
+            }
+            
+        }
+        
     }
 
     #endregion

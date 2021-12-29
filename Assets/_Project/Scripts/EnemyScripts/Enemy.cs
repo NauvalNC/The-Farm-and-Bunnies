@@ -11,10 +11,14 @@ public class Enemy : MonoBehaviour
     public float stoppingDstMultiplier = 2f;
     public float initSpeed = 4f;
     public int maxHealth = 20;
+
     bool m_isSlow;
     float m_speed = 4f;
     int m_health;
-   
+
+    [SerializeField]
+    Transform m_crateTransform;
+
     NavMeshAgent m_agent;
     Crate m_crate;
 
@@ -30,7 +34,7 @@ public class Enemy : MonoBehaviour
         m_speed = initSpeed;
         m_health = maxHealth;
         m_agent = GetComponent<NavMeshAgent>();
-
+        
     }
 
     private void Update()
@@ -38,6 +42,7 @@ public class Enemy : MonoBehaviour
      
         RunAgent();
         UpdateGraphics();
+ 
     }
 
     void UpdateGraphics()
@@ -72,17 +77,17 @@ public class Enemy : MonoBehaviour
     void OnDestinationReached()
     {
         Transform m_temp = targetDes;
+
+        if(!m_isGotItem) m_crateTransform = m_temp;
+        
         targetDes = null;
+
 
         if (m_temp == portal)
         {
             OnManageToSteal();
         } else
         {
-            Debug.Log("Item stealed, back to portal!");
-            
-            m_crate = m_temp.GetComponent<Crate>();
-            m_crate.Stealed();
 
             m_isGotItem = true;
             SetDestination(portal);
@@ -91,7 +96,8 @@ public class Enemy : MonoBehaviour
 
     void OnManageToSteal()
     {
-        Debug.Log("Item successfully stealed!");
+        m_crate = m_crateTransform.GetComponent<Crate>();
+        m_crate.Stealed();
         Destroy(gameObject);
     }
 

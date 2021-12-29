@@ -17,6 +17,8 @@ public class LevelSelectionMenu : MonoBehaviour
     private void Start()
     {
         LoadLevelPanels();
+        //load score data
+
     }
 
     private void LoadLevelPanels()
@@ -26,6 +28,7 @@ public class LevelSelectionMenu : MonoBehaviour
         GameObject m_temp;
         Transform m_starCont;
         Text m_lvNumber;
+
         for (int i = 0; i < numOfDemoLevels; i++)
         {
             m_temp = Instantiate(levelPanelPrefab, levelPanelCont);
@@ -36,10 +39,13 @@ public class LevelSelectionMenu : MonoBehaviour
 
             // Color the stars based on level completion
             m_starCont = m_temp.transform.Find("star_cont");
+            
+          
             foreach (Transform m_star in m_starCont)
             {
                 m_star.GetComponent<Image>().color = incompletedStarColor;
             }
+
 
             // If the level is level 1-2 (which is the demo) then set lock to available
             if (i + 1 <= 2)

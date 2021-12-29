@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     static GameManager instance;
@@ -270,7 +270,9 @@ public class GameManager : MonoBehaviour
                 score = 2;
             }
 
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, score);
             UIGameManager.instance.ShowWinPanel();
+
            
 
         }

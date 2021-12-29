@@ -350,7 +350,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 37915762}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 292292557}
+        m_TargetAssemblyTypeName: UIGameManager, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &37915762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8867924, g: 0.46514237, b: 0.32125306, a: 1}
+  m_Color: {r: 1, g: 0.4126191, b: 0.2113207, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -579,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9716981, g: 0.6736271, b: 0.5445176, a: 1}
+  m_Color: {r: 1, g: 0.85791934, b: 0.7962264, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1127,6 +1139,7 @@ GameObject:
   - component: {fileID: 226162832}
   - component: {fileID: 226162834}
   - component: {fileID: 226162833}
+  - component: {fileID: 226162835}
   m_Layer: 5
   m_Name: Carrot (2)
   m_TagString: Untagged
@@ -1191,6 +1204,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226162831}
   m_CullTransparentMesh: 1
+--- !u!114 &226162835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226162831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.6698113, g: 0.42340717, b: 0.24264859, a: 0.8666667}
+  m_EffectDistance: {x: -8.57, y: -5.4}
+  m_UseGraphicAlpha: 1
 --- !u!4 &232029814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad9a2c12375bc6849a849e6d36cdb843, type: 3}
@@ -1515,10 +1543,10 @@ MonoBehaviour:
   wavePortalLister: {fileID: 1957162042}
   waveTxt: {fileID: 1648750364}
   numberOfEnemyTxt: {fileID: 688187708}
-  m_score: 0
-  m_carrot_left_one: 3
-  m_carrot_left_two: 5
-  m_carrot_left_three: 0
+  m_succeedLevel: 0
+  score: 3
+  m_carrot_threshold_two: 4
+  m_carrot_threshold_three: 7
 --- !u!114 &292292554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2137,6 +2165,7 @@ GameObject:
   - component: {fileID: 410271517}
   - component: {fileID: 410271519}
   - component: {fileID: 410271518}
+  - component: {fileID: 410271520}
   m_Layer: 5
   m_Name: Carrot (1)
   m_TagString: Untagged
@@ -2201,6 +2230,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410271516}
   m_CullTransparentMesh: 1
+--- !u!114 &410271520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410271516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.6698113, g: 0.42340717, b: 0.24264859, a: 0.8666667}
+  m_EffectDistance: {x: -8.57, y: -5.4}
+  m_UseGraphicAlpha: 1
 --- !u!4 &440677149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc221976b56626b48b431f20b22aa81f, type: 3}
@@ -4020,7 +4064,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 771417273}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 292292557}
+        m_TargetAssemblyTypeName: UIGameManager, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &771417273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4034,7 +4090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8867924, g: 0.46514237, b: 0.32125306, a: 1}
+  m_Color: {r: 1, g: 0.4126191, b: 0.2113207, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4792,7 +4848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9716981, g: 0.6736271, b: 0.5445176, a: 1}
+  m_Color: {r: 1, g: 0.85791934, b: 0.7962264, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6065,6 +6121,7 @@ GameObject:
   - component: {fileID: 1311731408}
   - component: {fileID: 1311731410}
   - component: {fileID: 1311731409}
+  - component: {fileID: 1311731411}
   m_Layer: 5
   m_Name: Carrot
   m_TagString: Untagged
@@ -6129,6 +6186,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311731407}
   m_CullTransparentMesh: 1
+--- !u!114 &1311731411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311731407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.6698113, g: 0.42340717, b: 0.24264859, a: 0.8666667}
+  m_EffectDistance: {x: -8.57, y: -5.4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1319067475
 GameObject:
   m_ObjectHideFlags: 0
@@ -7274,7 +7346,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1525723905}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 292292557}
+        m_TargetAssemblyTypeName: UIGameManager, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1525723905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7288,7 +7372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8867924, g: 0.46514237, b: 0.32125306, a: 1}
+  m_Color: {r: 1, g: 0.4126191, b: 0.2113207, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7946,7 +8030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9716981, g: 0.6736271, b: 0.5445176, a: 1}
+  m_Color: {r: 1, g: 0.85791934, b: 0.7962264, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9754,6 +9838,7 @@ GameObject:
   - component: {fileID: 2113093584}
   - component: {fileID: 2113093586}
   - component: {fileID: 2113093585}
+  - component: {fileID: 2113093587}
   m_Layer: 5
   m_Name: Win Panel
   m_TagString: Untagged
@@ -9796,7 +9881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8396226, g: 0.6603038, b: 0.24871837, a: 1}
+  m_Color: {r: 0.8392157, g: 0.5431445, b: 0.24705882, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9821,6 +9906,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113093583}
   m_CullTransparentMesh: 1
+--- !u!114 &2113093587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113093583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4721777d9541d4c9221ecef29af6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_color_carrot: {fileID: 21300000, guid: 0d46c76021a8d1342b32725a5d1ac58e, type: 3}
+  m_carrot_list: {fileID: 958490802}
 --- !u!4 &2125810820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc221976b56626b48b431f20b22aa81f, type: 3}

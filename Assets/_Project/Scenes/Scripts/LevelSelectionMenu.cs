@@ -39,7 +39,24 @@ public class LevelSelectionMenu : MonoBehaviour
 
             // Color the stars based on level completion
             m_starCont = m_temp.transform.Find("star_cont");
-            int levelScore = PlayerPrefs.GetInt("C" + PlayerPrefs.GetInt("Chapter") + "_L"+ (i+1));
+            int levelScore = PlayerPrefs.GetInt("C" + PlayerPrefs.GetInt("Chapter") + "_L"+ (i));
+
+            if (i == 0 || levelScore != 0)
+            {
+                m_temp.transform.Find("lock_panel").gameObject.SetActive(false);
+                Button m_button = m_temp.GetComponent<Button>();
+                m_button.interactable = true;
+                int m_lvIndex = i + 1;
+                m_button.onClick.AddListener(delegate { LoadLevel(m_lvIndex); });
+            }
+
+            else
+            {
+                m_temp.GetComponent<Button>().interactable = false;
+            }
+
+            //TOLONG fix caranya biar nggak double di atas 
+            levelScore = PlayerPrefs.GetInt("C" + PlayerPrefs.GetInt("Chapter") + "_L"+ (i+1));
             foreach (Transform m_star in m_starCont)
             {
                 if (levelScore >= 1)
@@ -53,19 +70,23 @@ public class LevelSelectionMenu : MonoBehaviour
                 }
             }
 
+            // TEST UNLOCK LEVEL
+           
+            
 
             // If the level is level 1-2 (which is the demo) then set lock to available
-            if (i + 1 <= 2)
-            {
-                m_temp.transform.Find("lock_panel").gameObject.SetActive(false);
-                Button m_button = m_temp.GetComponent<Button>();
-                m_button.interactable = true;
-                int m_lvIndex = i + 1;
-                m_button.onClick.AddListener(delegate { LoadLevel(m_lvIndex); });
-            } else
-            {
-                m_temp.GetComponent<Button>().interactable = false;
-            }
+            // if (i + 1 <= 2)
+            // {
+            //     m_temp.transform.Find("lock_panel").gameObject.SetActive(false);
+            //     Button m_button = m_temp.GetComponent<Button>();
+            //     m_button.interactable = true;
+            //     int m_lvIndex = i + 1;
+            //     m_button.onClick.AddListener(delegate { LoadLevel(m_lvIndex); });
+            // } 
+            // else
+            // {
+            //     m_temp.GetComponent<Button>().interactable = false;
+            // }
         }
     }
 

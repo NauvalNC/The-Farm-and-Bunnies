@@ -250,6 +250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chapterAC: {fileID: 281245204}
+  chapterPanelCont: {fileID: 2580155253881003465}
+  numberOfChapters: 5
 --- !u!95 &281245204
 Animator:
   serializedVersion: 3
@@ -786,6 +788,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2580155253790390633, guid: 0b5c413a551cb4946af9561a74c24c87, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2580155253808827539, guid: 0b5c413a551cb4946af9561a74c24c87, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -802,8 +808,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2580155253889592858, guid: 0b5c413a551cb4946af9561a74c24c87, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580155253889592858, guid: 0b5c413a551cb4946af9561a74c24c87, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b5c413a551cb4946af9561a74c24c87, type: 3}
+--- !u!224 &2580155253881003465 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2580155253496881578, guid: 0b5c413a551cb4946af9561a74c24c87, type: 3}
+  m_PrefabInstance: {fileID: 2580155253881003464}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4692894302939409360
 PrefabInstance:
   m_ObjectHideFlags: 0

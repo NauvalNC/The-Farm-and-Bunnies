@@ -17,6 +17,8 @@ public class LevelSelectionMenu : MonoBehaviour
     private void Start()
     {
         LoadLevelPanels();
+        //load score data
+
     }
 
     private void LoadLevelPanels()
@@ -71,6 +73,7 @@ public class LevelSelectionMenu : MonoBehaviour
             // TEST UNLOCK LEVEL
            
             
+
             // If the level is level 1-2 (which is the demo) then set lock to available
             // if (i + 1 <= 2)
             // {

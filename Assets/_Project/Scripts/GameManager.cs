@@ -77,8 +77,6 @@ public class GameManager : MonoBehaviour
         {
             m_succeedLevel = false;
             m_isGameOver = true;
-            print("lose");
-            return;
         }
 
         if (m_isGameOver) OnGameOver();
@@ -105,7 +103,7 @@ public class GameManager : MonoBehaviour
     void UpdateGraphics()
     {
         waveTxt.text = "Wave " + m_wave;
-        numberOfEnemyTxt.text = m_currWaveOutOfDuties + "/" + m_currWaveTotalEnemies;
+        numberOfEnemyTxt.text = (m_currWaveTotalEnemies - m_currWaveOutOfDuties) + "/" + m_currWaveTotalEnemies;
         numOfItemTxt.text = Crate.totalCurrItems + "/" + m_totalNumberOfItem;
     }
 

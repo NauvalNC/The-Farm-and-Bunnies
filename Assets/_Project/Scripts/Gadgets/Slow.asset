@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gadgetName: 
   gadgetDescription: 
-  gadgetIcon: {fileID: 21300000, guid: 0d46c76021a8d1342b32725a5d1ac58e, type: 3}
+  gadgetIcon: {fileID: 21300000, guid: 09ab24a7c0628da4eabf9fd9011691b3, type: 3}
   prefab: {fileID: 6993755851280931423, guid: 90d3b048664e4604ca84200ddf4ec729, type: 3}
   DPCost: 3
   CD: 3

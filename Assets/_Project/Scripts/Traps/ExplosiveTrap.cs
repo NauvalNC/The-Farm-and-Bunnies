@@ -22,7 +22,7 @@ public class ExplosiveTrap : AOETrap
         if(m_explodeDur <= -.1f)
         {
             Explode();
-            FindObjectOfType<AudioManager>().Play("Bomb");
+            AudioManager.instance.Play("Bomb");
             Destroy(gameObject);
 
         }

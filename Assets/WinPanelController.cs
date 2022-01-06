@@ -16,10 +16,10 @@ public class WinPanelController : MonoBehaviour
 
     private void OnEnable()
     {
-        
-        FindObjectOfType<AudioManager>().Play("Win");
 
-        for(int i = 0; i < GameManager.Instance.score; i++)
+        AudioManager.instance.Play("Win");
+
+        for (int i = 0; i < GameManager.Instance.score; i++)
         {
             m_carrot_list.transform.GetChild(i).GetComponent<Image>().sprite = m_color_carrot;
         }

@@ -11,24 +11,25 @@ public class LevelSelectionMenu : MonoBehaviour
     [SerializeField] private GameObject levelPanelPrefab;
 
     [Header("Demo Settings")]
-    [SerializeField] private int numOfDemoLevels = 20;
+    [SerializeField] private int numOfDemoLevels = 3;
     [SerializeField] private Color completedStarColor, incompletedStarColor;
 
     private void Start()
     {
         LoadLevelPanels();
-        //load score data
-
+ 
     }
 
     private void LoadLevelPanels()
     {
+
         // TODO: Change this to load actual levels.
         // But in this demo, I will only load two level, which is chapter 1 lv1-2.
         GameObject m_temp;
         Transform m_starCont;
         Text m_lvNumber;
         int chapter = PlayerPrefs.GetInt("Chapter");
+        print(chapter);
         for (int i = 0; i < numOfDemoLevels; i++)
         {
             m_temp = Instantiate(levelPanelPrefab, levelPanelCont);

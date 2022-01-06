@@ -28,34 +28,34 @@ public class UIGameManager : MonoBehaviour
     public void Pause()
     {
         pause_menu.SetActive(true);
-        FindObjectOfType<AudioManager>().Play("button");
+        AudioManager.instance.Play("Button");
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
         Time.timeScale = 1;
-        FindObjectOfType<AudioManager>().Play("Button");
+        AudioManager.instance.Play("Button");
         pause_menu.SetActive(false);
     }
 
     public void Restart()
     {
         Time.timeScale = 1;
-        FindObjectOfType<AudioManager>().Play("Button");
+        AudioManager.instance.Play("Button");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1;
-        FindObjectOfType<AudioManager>().Play("Button");
+        AudioManager.instance.Play("Button");
         SceneManager.LoadScene(0);
     }
 
     public void NextLevel()
     {
-        FindObjectOfType<AudioManager>().Play("Button");
+        AudioManager.instance.Play("Button");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

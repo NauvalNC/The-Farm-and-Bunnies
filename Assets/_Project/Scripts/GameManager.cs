@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
     protected Transform crateLister;
     public List<Crate> crates = new List<Crate>();
     public Text numOfItemTxt;
-    int m_currentTotalNumberOfItem, m_totalNumberOfItem;
-
+    public int currentTotalNumberOfItem;
+    private int m_totalNumberOfItem;
     [Header("Enemy Wave Manager")]
     public int numberOfWave = 2;
     public Transform wavePortalLister;
@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
     private int m_carrot_threshold_three;
 
 
-
     private void Awake()
     {
         SetupAttributes();
@@ -65,7 +64,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         ManageWave();
-        ManageCrates();
+        //ManageCrates();
         CheckPointerOverUI();
         UpdateGraphics();
 
@@ -73,8 +72,9 @@ public class GameManager : MonoBehaviour
 
         //defeat all wave and some carrots left -> win condition (line 153)
         //all carrots stolen -> lose condition
-        if (Crate.totalCurrItems <= 0)
+        if (currentTotalNumberOfItem <= 0)
         {
+            currentTotalNumberOfItem = 0;
             m_succeedLevel = false;
             m_isGameOver = true;
         }
@@ -98,13 +98,14 @@ public class GameManager : MonoBehaviour
         {
             m_wavePortal.Add(child.GetComponent<WavePortal>());
         }
+        currentTotalNumberOfItem = m_totalNumberOfItem;
     }
 
     void UpdateGraphics()
     {
         waveTxt.text = "Wave " + m_wave;
         numberOfEnemyTxt.text = (m_currWaveTotalEnemies - m_currWaveOutOfDuties) + "/" + m_currWaveTotalEnemies;
-        numOfItemTxt.text = Crate.totalCurrItems + "/" + m_totalNumberOfItem;
+        numOfItemTxt.text = currentTotalNumberOfItem + "/" + m_totalNumberOfItem;
     }
 
     #region Request System Priority
@@ -215,14 +216,14 @@ public class GameManager : MonoBehaviour
 
     #region Crate
 
-    void ManageCrates()
-    {
-        m_currentTotalNumberOfItem = 0;
-        foreach (Crate m_crate in crates)
-        {
-            m_currentTotalNumberOfItem = m_crate.GetActualNumberOfItems();
-        }
-    }
+    //void ManageCrates()
+    //{
+    //    currentTotalNumberOfItem = 0;
+    //    foreach (Crate m_crate in crates)
+    //    {
+    //        currentTotalNumberOfItem = m_crate.GetActualNumberOfItems();
+    //    }
+    //}
 
     #endregion
 
@@ -258,11 +259,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if(Crate.totalCurrItems < m_carrot_threshold_two)
+            if(currentTotalNumberOfItem < m_carrot_threshold_two)
             {
                 score = 1;
             }
-            else if(Crate.totalCurrItems < m_carrot_threshold_three)
+            else if(currentTotalNumberOfItem < m_carrot_threshold_three)
             {
                 score = 2;
             }

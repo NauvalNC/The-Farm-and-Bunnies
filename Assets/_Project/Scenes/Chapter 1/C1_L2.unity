@@ -533,6 +533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
 --- !u!4 &46846792 stripped
@@ -694,6 +698,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2f2c8843bc8052e44bb0bdcbad7260ab, type: 3}
       propertyPath: m_Name
       value: Barn_Extra_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f2c8843bc8052e44bb0bdcbad7260ab, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2f2c8843bc8052e44bb0bdcbad7260ab, type: 3}
       propertyPath: m_NavMeshLayer
@@ -931,7 +939,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -11.815979, y: -215}
+  m_AnchoredPosition: {x: -11.815918, y: -215}
   m_SizeDelta: {x: -320.24, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165738719
@@ -1250,6 +1258,10 @@ PrefabInstance:
       value: LandExtra_1 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fc221976b56626b48b431f20b22aa81f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fc221976b56626b48b431f20b22aa81f, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -1310,6 +1322,7 @@ MonoBehaviour:
   crateLister: {fileID: 1840983726}
   crates: []
   numOfItemTxt: {fileID: 1348853107}
+  currentTotalNumberOfItem: 0
   numberOfWave: 2
   wavePortalLister: {fileID: 1957162042}
   waveTxt: {fileID: 1648750364}
@@ -1825,6 +1838,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 818735395db51a248bdf1498cec60aaa, type: 3}
       propertyPath: m_Name
       value: Tree_sphere_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 818735395db51a248bdf1498cec60aaa, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 818735395db51a248bdf1498cec60aaa, type: 3}
@@ -2362,7 +2379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 494515163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2442,6 +2459,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad9a2c12375bc6849a849e6d36cdb843, type: 3}
       propertyPath: m_Name
       value: LandExtra_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad9a2c12375bc6849a849e6d36cdb843, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ad9a2c12375bc6849a849e6d36cdb843, type: 3}
       propertyPath: m_NavMeshLayer
@@ -2812,6 +2833,10 @@ PrefabInstance:
       value: LandExtra_3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65b36f1c79c21af47b13ce257f6b2732, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65b36f1c79c21af47b13ce257f6b2732, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -2887,6 +2912,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a784dfa9546d90b44aac6e69b4bf812e, type: 3}
       propertyPath: m_Name
       value: Fence_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a784dfa9546d90b44aac6e69b4bf812e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a784dfa9546d90b44aac6e69b4bf812e, type: 3}
@@ -3269,6 +3298,10 @@ PrefabInstance:
       value: Tree_sphere_2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 818735395db51a248bdf1498cec60aaa, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 818735395db51a248bdf1498cec60aaa, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -3315,7 +3348,7 @@ GameObject:
   - component: {fileID: 694723059}
   - component: {fileID: 694723058}
   m_Layer: 0
-  m_Name: Global Volume
+  m_Name: GlobalVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3337,7 +3370,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 2fb28aa8396a09049b50aa5a36515468, type: 2}
 --- !u!4 &694723059
 Transform:
   m_ObjectHideFlags: 0
@@ -3346,11 +3379,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694723057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0605345, y: 1.3252609, z: 4.8819523}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &695059133
 GameObject:
@@ -3610,6 +3643,10 @@ PrefabInstance:
       value: LandExtra_3 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65b36f1c79c21af47b13ce257f6b2732, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65b36f1c79c21af47b13ce257f6b2732, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -3699,6 +3736,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 455d4f3eac71ac94f8987a2a4899d6ba, type: 3}
       propertyPath: m_Name
       value: Haybale
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 455d4f3eac71ac94f8987a2a4899d6ba, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455d4f3eac71ac94f8987a2a4899d6ba, type: 3}
@@ -3929,6 +3970,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 467e9e1da3957a9469dda68476b28210, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467e9e1da3957a9469dda68476b28210, type: 3}
 --- !u!4 &753325244 stripped
@@ -4065,6 +4110,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6e81c8374ba7f7849a4bc70f9e1c30bf, type: 3}
       propertyPath: m_Name
       value: Flower_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e81c8374ba7f7849a4bc70f9e1c30bf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e81c8374ba7f7849a4bc70f9e1c30bf, type: 3}
@@ -4366,6 +4415,10 @@ PrefabInstance:
       value: LandExtra_1 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fc221976b56626b48b431f20b22aa81f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fc221976b56626b48b431f20b22aa81f, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -4469,7 +4522,7 @@ RectTransform:
   - {fileID: 965659716}
   - {fileID: 1336364937}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4564,6 +4617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_sphere_2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 818735395db51a248bdf1498cec60aaa, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 818735395db51a248bdf1498cec60aaa, type: 3}
 --- !u!4 &890994034 stripped
@@ -4610,7 +4667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3627217629686493210, guid: 690ae21a6689f974e930ba7242aa88f3, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3627217629686493210, guid: 690ae21a6689f974e930ba7242aa88f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4830,6 +4887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46c5fbfc0aeb42142935276e1a1b3ea2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46c5fbfc0aeb42142935276e1a1b3ea2, type: 3}
 --- !u!4 &932894420 stripped
@@ -4913,6 +4974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
 --- !u!1 &946237549
@@ -4924,7 +4989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 946237550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Others
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5016,6 +5081,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fdd4202d96bef944cb8d9c67b0adb121, type: 3}
       propertyPath: m_Name
       value: Tree_Cone_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fdd4202d96bef944cb8d9c67b0adb121, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fdd4202d96bef944cb8d9c67b0adb121, type: 3}
       propertyPath: m_NavMeshLayer
@@ -5428,6 +5497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
 --- !u!1 &1068365759
@@ -5580,6 +5653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Haybale (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 455d4f3eac71ac94f8987a2a4899d6ba, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455d4f3eac71ac94f8987a2a4899d6ba, type: 3}
 --- !u!4 &1069456148 stripped
@@ -5653,6 +5730,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fc221976b56626b48b431f20b22aa81f, type: 3}
       propertyPath: m_Name
       value: LandExtra_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fc221976b56626b48b431f20b22aa81f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fc221976b56626b48b431f20b22aa81f, type: 3}
       propertyPath: m_NavMeshLayer
@@ -5730,6 +5811,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
       propertyPath: m_Name
       value: Grass_1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
@@ -6065,6 +6150,10 @@ PrefabInstance:
       value: LandExtra_2 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ad9a2c12375bc6849a849e6d36cdb843, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad9a2c12375bc6849a849e6d36cdb843, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -6161,6 +6250,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a784dfa9546d90b44aac6e69b4bf812e, type: 3}
       propertyPath: m_Name
       value: Fence_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a784dfa9546d90b44aac6e69b4bf812e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a784dfa9546d90b44aac6e69b4bf812e, type: 3}
@@ -6543,6 +6636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Cone_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e396aced908e61b4e93b4cd470cf4635, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e396aced908e61b4e93b4cd470cf4635, type: 3}
 --- !u!1 &1257788870 stripped
@@ -6681,6 +6778,10 @@ PrefabInstance:
       value: Tree_sphere_1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 408f6e16ff0fc0e4e9466e20d5a4b4b6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 408f6e16ff0fc0e4e9466e20d5a4b4b6, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -6767,6 +6868,10 @@ PrefabInstance:
       value: LandExtra_4
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f9e490129d7d7264d998788b6bae6158, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9e490129d7d7264d998788b6bae6158, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -6804,7 +6909,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.6886792, g: 0.08705943, b: 0.08705943, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -7092,6 +7197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_sphere_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 408f6e16ff0fc0e4e9466e20d5a4b4b6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 408f6e16ff0fc0e4e9466e20d5a4b4b6, type: 3}
 --- !u!4 &1358913640 stripped
@@ -7312,7 +7421,7 @@ RectTransform:
   - {fileID: 160219134}
   - {fileID: 1380061674}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7753,6 +7862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
 --- !u!4 &1461817336 stripped
@@ -8191,6 +8304,10 @@ PrefabInstance:
       value: LandExtra_2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ad9a2c12375bc6849a849e6d36cdb843, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad9a2c12375bc6849a849e6d36cdb843, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -8254,6 +8371,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fdd4202d96bef944cb8d9c67b0adb121, type: 3}
       propertyPath: m_Name
       value: Tree_Cone_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fdd4202d96bef944cb8d9c67b0adb121, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdd4202d96bef944cb8d9c67b0adb121, type: 3}
@@ -8350,6 +8471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barn_Main
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d818086218722644bada908e829e8b23, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d818086218722644bada908e829e8b23, type: 3}
 --- !u!1 &1553376326 stripped
@@ -8427,6 +8552,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 467e9e1da3957a9469dda68476b28210, type: 3}
       propertyPath: m_Name
       value: Flower_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 467e9e1da3957a9469dda68476b28210, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467e9e1da3957a9469dda68476b28210, type: 3}
@@ -8560,6 +8689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Haybale (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 455d4f3eac71ac94f8987a2a4899d6ba, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455d4f3eac71ac94f8987a2a4899d6ba, type: 3}
 --- !u!1001 &1614245566
@@ -8628,6 +8761,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46c5fbfc0aeb42142935276e1a1b3ea2, type: 3}
       propertyPath: m_Name
       value: Stone_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46c5fbfc0aeb42142935276e1a1b3ea2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46c5fbfc0aeb42142935276e1a1b3ea2, type: 3}
@@ -8995,7 +9132,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &1661511407
@@ -9330,6 +9467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a784dfa9546d90b44aac6e69b4bf812e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a784dfa9546d90b44aac6e69b4bf812e, type: 3}
 --- !u!1 &1733457183
@@ -9612,6 +9753,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e396aced908e61b4e93b4cd470cf4635, type: 3}
       propertyPath: m_Name
       value: Tree_Cone_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e396aced908e61b4e93b4cd470cf4635, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e396aced908e61b4e93b4cd470cf4635, type: 3}
       propertyPath: m_NavMeshLayer
@@ -10085,7 +10230,7 @@ GameObject:
   - component: {fileID: 1858354469}
   - component: {fileID: 1858354468}
   - component: {fileID: 1858354467}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10202,7 +10347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.0026245117, y: 540}
+  m_AnchoredPosition: {x: 0.0026855469, y: 540}
   m_SizeDelta: {x: -957.98, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889207721
@@ -10312,6 +10457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
 --- !u!4 &1901300181 stripped
@@ -10328,7 +10477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1906366220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ExtraLand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10426,6 +10575,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 818735395db51a248bdf1498cec60aaa, type: 3}
       propertyPath: m_Name
       value: Tree_sphere_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 818735395db51a248bdf1498cec60aaa, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 818735395db51a248bdf1498cec60aaa, type: 3}
@@ -10528,7 +10681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1916877880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10854,6 +11007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 352644e1722907240bb2189a8649862f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 352644e1722907240bb2189a8649862f, type: 3}
 --- !u!4 &1938321364 stripped
@@ -11025,6 +11182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass_2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2e20b4c905641a34bb89947508ef94c1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e20b4c905641a34bb89947508ef94c1, type: 3}
 --- !u!4 &1980294557 stripped
@@ -11041,7 +11202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1982474543}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11126,6 +11287,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
       propertyPath: m_Name
       value: Grass_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539e3e214aace97459d356ee2aef9955, type: 3}
@@ -11281,6 +11446,10 @@ PrefabInstance:
       value: LandExtra_1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fc221976b56626b48b431f20b22aa81f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fc221976b56626b48b431f20b22aa81f, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -11344,6 +11513,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 65b36f1c79c21af47b13ce257f6b2732, type: 3}
       propertyPath: m_Name
       value: LandExtra_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65b36f1c79c21af47b13ce257f6b2732, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65b36f1c79c21af47b13ce257f6b2732, type: 3}
       propertyPath: m_NavMeshLayer

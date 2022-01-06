@@ -692,11 +692,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.28235295}
   m_EffectDistance: {x: -3.95, y: -3.28}
   m_UseGraphicAlpha: 1
---- !u!1 &125079913 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3627217629686493188, guid: 690ae21a6689f974e930ba7242aa88f3, type: 3}
-  m_PrefabInstance: {fileID: 80725123}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &143738996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +1512,7 @@ MonoBehaviour:
   crateLister: {fileID: 1840983726}
   crates: []
   numOfItemTxt: {fileID: 1348853107}
+  currentTotalNumberOfItem: 0
   numberOfWave: 2
   wavePortalLister: {fileID: 1957162042}
   waveTxt: {fileID: 1648750364}
@@ -7885,7 +7881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -9635,7 +9631,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_color_carrot: {fileID: 21300000, guid: 0d46c76021a8d1342b32725a5d1ac58e, type: 3}
   m_carrot_list: {fileID: 958490802}
-  other: {fileID: 125079913}
 --- !u!4 &2125810820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc221976b56626b48b431f20b22aa81f, type: 3}

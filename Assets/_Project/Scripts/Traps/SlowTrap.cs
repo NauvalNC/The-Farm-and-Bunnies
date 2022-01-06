@@ -21,7 +21,7 @@ public class SlowTrap : AOETrap
         { 
             m_director.Play();
             if(m_dur == slow.slowDuration){
-                FindObjectOfType<AudioManager>().Play("Mud");   
+                AudioManager.instance.Play("Mud");
             }
             m_dur -= Time.deltaTime;
         }

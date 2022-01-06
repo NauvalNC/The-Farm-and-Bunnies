@@ -112,7 +112,7 @@ public class Enemy : MonoBehaviour
         if(m_health <= 0)
         {
             //enemy death
-            FindObjectOfType<AudioManager>().Play("Death");
+            AudioManager.instance.Play("Death");
             Destroy(gameObject);
         }
     }

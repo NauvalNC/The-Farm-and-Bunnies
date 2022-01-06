@@ -46,4 +46,8 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
         
     }
+   
+    public void Trap(){
+        Play("Trap");
+    }
 }

@@ -20,6 +20,9 @@ public class SlowTrap : AOETrap
         if (!isDragging)
         { 
             m_director.Play();
+            if(m_dur == slow.slowDuration){
+                FindObjectOfType<AudioManager>().Play("Mud");   
+            }
             m_dur -= Time.deltaTime;
         }
         if(m_dur <= 0)

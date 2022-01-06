@@ -13,23 +13,30 @@ public class TangleTrap : SingleTargetTrap
     {
         m_tangleDur = tangleStats.tangleDuration;
         m_animator = GetComponent<Animator>();
+        
     }
     // Update is called once per frame
     void Update()
     {
+        
         if (m_trigger)
         {
             m_tangleDur -= Time.deltaTime;
             if (m_tangleDur > 0)
             {
-
                 target.GetComponent<Enemy>().Tangle();
                 m_animator.SetTrigger("Catch");
-                target.gameObject.SetActive(false);
+                
+                if(target.gameObject.activeInHierarchy == true)
+                {
+                    FindObjectOfType<AudioManager>().Play("Trap");
+                }
+               target.gameObject.SetActive(false);
 
             }
             else
             {
+                
                 target.GetComponent<Enemy>().ResetSpeed();
                 target.gameObject.SetActive(true);
                 Destroy(gameObject);

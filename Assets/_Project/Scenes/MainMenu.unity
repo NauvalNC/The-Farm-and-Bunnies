@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19198136, g: 0.59466, b: 0.7773307, a: 1}
+  m_IndirectSpecularColor: {r: 0.19198903, g: 0.59465885, b: 0.7773138, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1160,19 +1160,19 @@ MonoBehaviour:
 
     Stevanno Andrew Irawan - 2301861005
 
-    Verdian
-    Krishnanda Tjoa - 2301877804
+    Verdian Krishnanda
+    Tjoa - 2301877804
 
     Javin Rionardi - 2301872942
 
 
-    These names
-    are BINUS University students attending:
+    These names are BINUS
+    University students attending:
 
     Class: LA04 - LEC
 
-    Course:
-    Mobile Game and Web Programming'
+    Course: Mobile Game
+    and Web Programming'
 --- !u!222 &1197528165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2252,6 +2252,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4398406160291639015, guid: 35aaa1e755157a64cbb09b650b0b69ce, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d302cff2d95a7846af096769f72acf9, type: 3}
     - target: {fileID: 4398406160291639032, guid: 35aaa1e755157a64cbb09b650b0b69ce, type: 3}
       propertyPath: m_Name
       value: BackgroundMusic

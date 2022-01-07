@@ -256,6 +256,8 @@ public class GameManager : MonoBehaviour
         {
             score = 0;
             UIGameManager.instance.ShowLosePanel();
+            AudioManager.instance.Play("Lose");
+            
         }
         else
         {

@@ -12,10 +12,8 @@ public class ChapterSelectionMenu : MonoBehaviour
     [SerializeField] private Color m_panelColor;
     [SerializeField] private Color m_textColor;
     private void Start() {
-        PlayerPrefs.SetInt("C1_L2", 2);
-        PlayerPrefs.SetInt("C1_L3", 2);
-        //PlayerPrefs.SetInt("C1_L3", 2);
-        UnlockLevels();
+        //UnlockLevels();
+       
     }
 
     public void UnlockLevels()

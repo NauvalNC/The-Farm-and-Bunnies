@@ -8,33 +8,40 @@ public class ChapterSelectionMenu : MonoBehaviour
 {
     [SerializeField] private Animator chapterAC;
     [SerializeField] private Transform chapterPanelCont;
-    [SerializeField] private int numberOfChapters = 5;
-
+    [SerializeField] private int numberOfChapters;
+    [SerializeField] private Color m_panelColor;
+    [SerializeField] private Color m_textColor;
     private void Start() {
+        PlayerPrefs.SetInt("C1_L2", 2);
+        PlayerPrefs.SetInt("C1_L3", 2);
+        //PlayerPrefs.SetInt("C1_L3", 2);
         UnlockLevels();
     }
 
     public void UnlockLevels()
     {   
         
-        //misalnya mau buka chapter selanjutnya di level 2
-        int levelIndex = 2;
-        //1 -> Chapter 1, etc
-        int chapterIndex = 0;
-        foreach (Transform chapterPanels in chapterPanelCont)
+        //last level in each chapter
+        int levelIndex = 3;
+ 
+        
+        for(int i = 0; i < numberOfChapters; i++)
         {
-            int levelScore = PlayerPrefs.GetInt("C" + (chapterIndex) + "_L"+ (levelIndex));
-            if (chapterIndex >= 1 && levelScore != 0)
+            int lastLevelScore = PlayerPrefs.GetInt("C" + (i+1) + "_L" + (levelIndex));
+            if(lastLevelScore > 0)
             {
-                Transform chapterPanel = chapterPanelCont.transform.GetChild(chapterIndex);
-                Transform m_icon_mask = chapterPanel.transform.Find("icon_mask");
+                Transform chapterPanel = chapterPanelCont.transform.GetChild(i + 1);
+                Transform m_icon_mask = chapterPanel.transform.GetChild(2);
+                Transform col_icon_mask = m_icon_mask.GetChild(0);
+                chapterPanel.GetChild(0).GetComponent<Text>().color = m_textColor;
+                chapterPanel.GetChild(1).GetComponent<Text>().color = m_textColor;
+                col_icon_mask.GetComponent<Image>().color = Color.white;
+                chapterPanel.GetComponent<Image>().color = m_panelColor;
                 m_icon_mask.transform.Find("lock_icon").gameObject.SetActive(false);
-                Button m_button = chapterPanels.GetComponent<Button>();
+                Button m_button = chapterPanel.GetComponent<Button>();
                 m_button.interactable = true;
-                int m_chapterIndex = chapterIndex + 1;
-                m_button.onClick.AddListener(delegate { LoadChapter(m_chapterIndex); });
+   
             }
-            chapterIndex++;
         }
     }
      

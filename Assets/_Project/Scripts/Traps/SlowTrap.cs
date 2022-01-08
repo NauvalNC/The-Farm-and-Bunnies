@@ -6,22 +6,20 @@ public class SlowTrap : AOETrap
 {
     public Slow slow;
     private float m_dur;
-    PlayableDirector m_director;
+
     List<Enemy> enemies = new List<Enemy>();
     private void Start()
     {
         m_dur = slow.slowDuration;
-        m_director = GetComponent<PlayableDirector>();
-        
+       
         
     }
     private void Update()
     {
         if (!isDragging)
         { 
-            m_director.Play();
             if(m_dur == slow.slowDuration){
-                FindObjectOfType<AudioManager>().Play("Mud");   
+                AudioManager.instance.Play("Mud");
             }
             m_dur -= Time.deltaTime;
         }

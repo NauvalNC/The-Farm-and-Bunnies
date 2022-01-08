@@ -29,7 +29,7 @@ public class TangleTrap : SingleTargetTrap
                 
                 if(target.gameObject.activeInHierarchy == true)
                 {
-                    FindObjectOfType<AudioManager>().Play("Trap");
+                    AudioManager.instance.Play("Trap");
                 }
                target.gameObject.SetActive(false);
 

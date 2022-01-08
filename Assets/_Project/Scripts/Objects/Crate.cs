@@ -13,17 +13,14 @@ public class Crate : MonoBehaviour
     [SerializeField]
     protected Text quantityText;
 
-    public static int totalCurrItems;
     private void Awake()
     {
         m_qtyItems = numberOfItems;
-        totalCurrItems += numberOfItems;
     }
 
     private void Update()
     {
         if (m_qtyItems <= 0) m_qtyItems = 0;
-        if (totalCurrItems <= 0) totalCurrItems = 0;
         UpdateGraphics();
     }
 
@@ -34,13 +31,8 @@ public class Crate : MonoBehaviour
 
     public void Stealed()
     {
-        totalCurrItems--;
+        GameManager.Instance.currentTotalNumberOfItem--;
         m_qtyItems--;
-    }
-
-    public void Returned()
-    {
-        m_qtyItems++;
     }
 
     public int GetNumberOfItems() { return numberOfItems; }

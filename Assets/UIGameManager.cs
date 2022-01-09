@@ -20,6 +20,10 @@ public class UIGameManager : MonoBehaviour
     [SerializeField]
     private GameObject pause_menu;
 
+    [Header("Ads Menu")]
+    [SerializeField]
+    private GameObject ads_menu;
+
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -73,5 +77,9 @@ public class UIGameManager : MonoBehaviour
         lose_panel.SetActive(true);
     }
 
+    public void ShowAdPanel()
+    {
+        ads_menu.SetActive(true);
+    }
     
 }

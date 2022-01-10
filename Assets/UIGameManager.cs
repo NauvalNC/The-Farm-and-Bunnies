@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class UIGameManager : MonoBehaviour
 {
     public static UIGameManager instance;
@@ -23,11 +23,34 @@ public class UIGameManager : MonoBehaviour
     [Header("Ads Menu")]
     [SerializeField]
     private GameObject ads_menu;
+    [SerializeField]
+    private Text m_countDownText;
+
+    bool m_countDown = false;
+    float m_startCountdown = 3;
 
     private void Awake()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
+    }
+
+    private void Start()
+    {
+        m_countDownText = overlay_panel.transform.GetChild(0).GetComponent<Text>();
+    }
+    private void Update()
+    {
+        if (m_countDown)
+        {
+            m_startCountdown -= Time.deltaTime;
+            if(m_startCountdown <= 0)
+            {
+                m_startCountdown = 3;
+                m_countDown = false;
+            }
+        }
+        m_countDownText.text = Mathf.Round(m_startCountdown).ToString();
     }
     public void Pause()
     {
@@ -59,6 +82,7 @@ public class UIGameManager : MonoBehaviour
 
     public void NextLevel()
     {
+        Time.timeScale = 1;
         AudioManager.instance.Play("Button");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -79,7 +103,31 @@ public class UIGameManager : MonoBehaviour
 
     public void ShowAdPanel()
     {
+        AudioManager.instance.Play("Button");
         ads_menu.SetActive(true);
     }
-    
+
+
+    public void Revive()
+    {
+        AudioManager.instance.Play("Button");
+        lose_panel.SetActive(false);
+        ads_menu.SetActive(false);
+        StartCoroutine(ResumeRevive());
+
+    }
+
+    IEnumerator ResumeRevive()
+    {
+        Time.timeScale = 1;
+        m_countDown = true;
+        m_countDownText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        m_countDownText.gameObject.SetActive(false);
+        overlay_panel.SetActive(false);
+        GameManager.Instance.Revive();
+        m_countDown = false;
+        m_startCountdown = 3;
+
+    }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int m_carrot_threshold_three;
 
+    public event Action OnGameOver;
+
 
     private void Awake()
     {
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         StartWaveDelay();
+        OnGameOver += GameOver;
     }
 
     private void Update()
@@ -79,7 +82,7 @@ public class GameManager : MonoBehaviour
             m_isGameOver = true;
         }
 
-        if (m_isGameOver) OnGameOver();
+        if (m_isGameOver) OnGameOverEnter();
         
     }
 
@@ -228,8 +231,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Game Over Manager
-    
-    public void OnGameOver()
+    void GameOver()
     {
         if (m_isGameOverInvoked) return;
         m_isGameOverInvoked = true;
@@ -240,39 +242,63 @@ public class GameManager : MonoBehaviour
 
         HUDManager.Instance.hideHUD();
 
-        
-        foreach (WavePortal portal in m_wavePortal)
-        {
-            portal.enabled = false;
-        }
+        Time.timeScale = 0;
 
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach(GameObject enemy in enemies)
-        {
-            Destroy(enemy);
-        }
-
-        if (!m_succeedLevel) 
+        if (!m_succeedLevel)
         {
             score = 0;
             UIGameManager.instance.ShowLosePanel();
             AudioManager.instance.Play("Lose");
-            
+
         }
         else
         {
-            if(currentTotalNumberOfItem < m_carrot_threshold_two)
+            score = 3;
+           
+            if (currentTotalNumberOfItem < m_carrot_threshold_two)
             {
                 score = 1;
             }
-            else if(currentTotalNumberOfItem < m_carrot_threshold_three)
+            else if (currentTotalNumberOfItem < m_carrot_threshold_three)
             {
                 score = 2;
             }
-            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name,score);
+            
+            int highScore = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name , 0);
+            
+            if(score > highScore)
+            {
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, score);
+            }
+            
             UIGameManager.instance.ShowWinPanel();
+            
+        }
+    }
+
+    
+    public void OnGameOverEnter()
+    {
+        if(OnGameOver != null)
+        {
+            OnGameOver();
         }
     }
 
     #endregion
+    
+    public void Revive()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            enemy.GetComponent<Enemy>().ResetSpeed();
+        }
+        currentTotalNumberOfItem = m_totalNumberOfItem;
+
+        HUDManager.Instance.showHUD();
+        m_isGameOverInvoked = false;
+        m_isGameOver = false;
+
+    }
 }

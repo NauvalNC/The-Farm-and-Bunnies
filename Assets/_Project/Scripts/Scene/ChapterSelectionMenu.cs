@@ -45,6 +45,7 @@ public class ChapterSelectionMenu : MonoBehaviour
      
     public void LoadChapter(int index)
     {
+        AudioManager.instance.Play("button");
         PlayerPrefs.SetInt("Chapter", index);
         StartCoroutine(LoadSceneAfterExit("LevelSelection"));
     }

@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        AudioManager.instance.Play("button");
         StartCoroutine(IPlay());
     }
 

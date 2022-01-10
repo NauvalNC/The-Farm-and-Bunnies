@@ -36,6 +36,11 @@ public class Enemy : MonoBehaviour
         m_agent = GetComponent<NavMeshAgent>();
         
     }
+    private void Start()
+    {
+        GameManager.Instance.OnGameOver += GameOver;
+    }
+
 
     private void Update()
     {
@@ -53,7 +58,6 @@ public class Enemy : MonoBehaviour
     void RunAgent()
     {
         m_agent.speed = m_speed;
-
         // Try to reach destination
         if (targetDes != null)
         {
@@ -121,6 +125,8 @@ public class Enemy : MonoBehaviour
     {
         m_isSlow = false;
         m_speed = initSpeed;
+        m_agent.speed = m_speed;
+        m_agent.isStopped = false;
     }
 
     public void DecreaseSpeed(int speed)
@@ -135,5 +141,18 @@ public class Enemy : MonoBehaviour
     public void Tangle()
     {
         m_speed = 0;
+    }
+
+    void GameOver()
+    {
+        m_speed = 0;
+        m_agent.speed = m_speed;
+        m_agent.isStopped = true;
+    }
+
+    private void OnDestroy()
+    {
+        if(gameObject != null || this != null)
+        GameManager.Instance.OnGameOver -= GameOver;
     }
 }

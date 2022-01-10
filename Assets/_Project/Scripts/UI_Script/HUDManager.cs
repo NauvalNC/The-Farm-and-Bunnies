@@ -42,12 +42,17 @@ public class HUDManager : MonoBehaviour
 
     public void hideHUD()
     {
-        StartCoroutine(hide(2));
+        StartCoroutine(hide(0));
+    }
+
+    public void showHUD()
+    {
+        HUD.SetActive(true);
     }
 
     IEnumerator hide(float time)
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(time);
         HUD.SetActive(false);
     }
  

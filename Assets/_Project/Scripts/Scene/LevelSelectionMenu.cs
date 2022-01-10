@@ -93,6 +93,7 @@ public class LevelSelectionMenu : MonoBehaviour
 
     public void LoadLevel(int index)
     {
+        AudioManager.instance.Play("Button");
         PlayerPrefs.SetInt("Level", index);
         StartCoroutine(LoadSceneAfterExit("C" + PlayerPrefs.GetInt("Chapter") + "_L"+ index));
     }

@@ -36,11 +36,9 @@ public class TangleTrap : SingleTargetTrap
             }
             else
             {
-                
-                target.GetComponent<Enemy>().ResetSpeed();
                 target.gameObject.SetActive(true);
+                target.GetComponent<Enemy>().ResetSpeed();
                 Destroy(gameObject);
-
             }
         }
 

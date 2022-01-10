@@ -82,8 +82,7 @@ public class GameManager : MonoBehaviour
             m_isGameOver = true;
         }
 
-        if (m_isGameOver) OnGameOverEnter();
-        
+        if (m_isGameOver) OnGameOverEnter();   
     }
 
     void SetupAttributes()

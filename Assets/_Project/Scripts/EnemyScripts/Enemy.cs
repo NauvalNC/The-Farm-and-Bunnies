@@ -152,7 +152,16 @@ public class Enemy : MonoBehaviour
 
     private void OnDestroy()
     {
-        if(gameObject != null || this != null)
-        GameManager.Instance.OnGameOver -= GameOver;
+        try
+        {
+            if (gameObject != null || this != null)
+            {
+                GameManager.Instance.OnGameOver -= GameOver;
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log(e.Message);
+        }
     }
 }

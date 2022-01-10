@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19198903, g: 0.59465885, b: 0.7773138, a: 1}
+  m_IndirectSpecularColor: {r: 0.18643223, g: 0.59736824, b: 0.7689942, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -566,6 +566,8 @@ MonoBehaviour:
   numberOfChapters: 3
   m_panelColor: {r: 0.10980392, g: 0.40784314, b: 0.1764706, a: 1}
   m_textColor: {r: 0.9137255, g: 0.6313726, b: 0.0627451, a: 1}
+  buttons:
+  - {fileID: 1445434237}
 --- !u!95 &281245204
 Animator:
   serializedVersion: 3

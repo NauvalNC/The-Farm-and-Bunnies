@@ -15,6 +15,8 @@ public class UIGameManager : MonoBehaviour
     private GameObject lose_panel;
     [SerializeField]
     private GameObject overlay_panel;
+    [SerializeField]
+    private Animator comingSoonAC;
 
     [Header("Pause Menu")]
     [SerializeField]
@@ -82,9 +84,21 @@ public class UIGameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        Time.timeScale = 1;
-        AudioManager.instance.Play("Button");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        try
+        {
+            Time.timeScale = 1;
+            AudioManager.instance.Play("Button");
+            if (SceneManager.GetActiveScene().name == "C1_L3")
+            {
+                throw new System.Exception();
+            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        catch (System.Exception e)
+        {
+            comingSoonAC.Play("panel_in", -1, 0f);
+            Debug.Log(e.Message);
+        }
     }
 
     public void ShowWinPanel()
@@ -128,6 +142,5 @@ public class UIGameManager : MonoBehaviour
         GameManager.Instance.Revive();
         m_countDown = false;
         m_startCountdown = 3;
-
     }
 }

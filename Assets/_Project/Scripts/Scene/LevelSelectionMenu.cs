@@ -13,9 +13,16 @@ public class LevelSelectionMenu : MonoBehaviour
     [Header("Demo Settings")]
     [SerializeField] private int numOfDemoLevels = 3;
     [SerializeField] private Color completedStarColor, incompletedStarColor;
+    [SerializeField] private Button[] buttons;
 
     private void Start()
     {
+        int len = buttons.Length;
+        for (int i = 0; i < len; i++)
+        {
+            buttons[i].onClick.AddListener(delegate { AudioManager.instance.Play("button"); });
+        }
+
         LoadLevelPanels();
  
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.16070218, g: 0.3467595, b: 0.4741826, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1026,6 +1026,7 @@ MonoBehaviour:
   win_panel: {fileID: 117292725}
   lose_panel: {fileID: 348538437}
   overlay_panel: {fileID: 679308822}
+  comingSoonAC: {fileID: 0}
   pause_menu: {fileID: 545979199}
   ads_menu: {fileID: 2073873033}
   m_countDownText: {fileID: 0}
@@ -6219,7 +6220,7 @@ PrefabInstance:
       objectReference: {fileID: 292292557}
     - target: {fileID: 6326241368300323153, guid: 7ff085989056d4a43a7123a889fdebce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
+      value: Revive
       objectReference: {fileID: 0}
     - target: {fileID: 6326241368500160973, guid: 7ff085989056d4a43a7123a889fdebce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6307,7 +6308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6326241369336906002, guid: 7ff085989056d4a43a7123a889fdebce, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6326241369422017099, guid: 7ff085989056d4a43a7123a889fdebce, type: 3}
       propertyPath: m_IsActive

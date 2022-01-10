@@ -2,11 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Animator infoAC, exitAC, mainAC;
     private bool isInfoOpen = false, isExitOpen = false;
+
+    [SerializeField]
+    private Button[] buttons;
+
+    private void Start()
+    {
+        int len = buttons.Length;
+        for (int i = 0; i < len; i++)
+        {
+            buttons[i].onClick.AddListener(delegate { AudioManager.instance.Play("button"); });
+        }
+    }
 
     public void PlayGame()
     {

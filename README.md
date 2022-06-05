@@ -11,3 +11,7 @@ bunnies invasion. The game is scored by how many carrots left in players farm.
 * Player can use gadget to help prevent bunnies. Each gadget will consume DP (deployment point), and it wil be replenished periodically.
 * The game is scored scored by 3 stars, depending on how many carrots left in players farm. If no carrot left, player is failed to complete the level.
 # Game Previews
+![Preview 1](https://github.com/NauvalNC/The-Farm-and-Bunnies/blob/main/_docs/preview_1.PNG)
+![Preview 2](https://github.com/NauvalNC/The-Farm-and-Bunnies/blob/main/_docs/preview_2.PNG)
+![Preview 3](https://github.com/NauvalNC/The-Farm-and-Bunnies/blob/main/_docs/preview_3.PNG)
+![Preview 4](https://github.com/NauvalNC/The-Farm-and-Bunnies/blob/main/_docs/preview_4.PNG)
